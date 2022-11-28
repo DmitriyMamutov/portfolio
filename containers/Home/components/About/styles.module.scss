@@ -1,0 +1,104 @@
+@import "./static/styles/base/variables";
+
+.about {
+  background: $colorFourthBlack;
+  color: $colorWhite;
+  position: relative;
+  padding: 120px 0;
+
+  &-content {
+    position: relative;
+
+    &__title {
+      width: 100%;
+      font-size: 56px;
+      line-height: 80px;
+      font-family: $fontHellix;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    &__description {
+      font-family: $fontHellix;
+      letter-spacing: 1px;
+      margin-bottom: 64px;
+      font-size: 18px;
+      line-height: 32px;
+    }
+
+    &-list {
+      display: block;
+
+      &-block {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+        &-left {
+          max-width: 50%;
+          width: 100%;
+          background-color: $colorTertiaryBlack;
+          border-radius: 80px;
+          padding: 32px 80px;
+          transform: translateX(50%);
+          position: relative;
+
+          &__title {
+            font-family: $fontHellix;
+            letter-spacing: 1px;
+            margin-bottom: 32px;
+            font-size: 26px;
+            line-height: 48px;
+            font-weight: 700;
+          }
+
+          &__subtitle {
+            font-family: $fontHellix;
+            font-size: 17px;
+            line-height: 32px;
+          }
+        }
+
+        &-right {
+          max-width: 50%;
+          width: 100%;
+          background: white;
+          border-radius: 80px;
+          padding: 32px 80px;
+          display: flex;
+          align-items: center;
+          transform: translateX(-50%);
+
+          &-sublist {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            &-item {
+              max-width: 14%;
+              width: 100%;
+              padding: 8px;
+
+              &__icon {
+                width: 100%;
+                margin-bottom: 8px;
+
+                img {
+                  width: 100%;
+                  height: auto;
+                }
+              }
+
+              &__text {
+                color: $colorFourthBlack;
+                font-size: 12px;
+                line-height: 24px;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

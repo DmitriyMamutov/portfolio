@@ -1,0 +1,19 @@
+{
+  "header": {
+    "items": {
+      "l1": {
+        "text": "About"
+      },
+      "l2": {
+        "text": "Experience"
+      },
+      "l3": {
+        "text": "Works"
+      },
+      "l4": {
+        "text": "Contact"
+      }
+    },
+    "buttonText": "Apply Now"
+  }
+}

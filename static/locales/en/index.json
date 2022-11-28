@@ -1,0 +1,71 @@
+{
+  "metaTitle": "Dmytro Mamutov | Frontend Developer",
+  "hero": {
+    "name": "Dmytro Mamutov",
+    "position": "Frontend Developer",
+    "description": "I enjoy building solid and user-friendly web applications using my experience in TypeScript, React and Next.js. ",
+    "buttonText": "Apply Now"
+  },
+  "about": {
+    "title": "<b>2+ years of work experience</b> in making responsive and cross-browser websites",
+    "description": "I like to do my job to the best of my abilities and always work honestly and responsibly on all of my projects.",
+    "items": {
+      "i1": {
+        "title": "FRONT-END DEVELOPMENT",
+        "subtitle": "I have extensive knowledge of HTML, CSS & JavaScript (ES6), TypeScript and experience with React, Next.js. Add ambition, endless curiosity and a GTD‑mindset and you have a pretty complete picture of me."
+      },
+      "i2": {
+        "title": "Fast Support",
+        "description": "We aim to be as available and supportive as we can to our clients. Feel free to use the form below or contact us directly with questions or requests."
+      },
+      "i3": {
+        "title": "SEO",
+        "description": "Using our expertise along with handy tools we strive for a high SEO score, ensuring higher visibility on search sites such as Google."
+      }
+    },
+    "icons": {
+      "a1": {
+        "text": "Javascript"
+      },
+      "a2": {
+        "text": "ES6"
+      },
+      "a3": {
+        "text": "Typescript"
+      },
+      "a4": {
+        "text": "React"
+      },
+      "a5": {
+        "text": "Next.js"
+      },
+      "a6": {
+        "text": "Redux"
+      },
+      "a7": {
+        "text": "Redux Saga"
+      },
+      "a8": {
+        "text": "CSS"
+      },
+      "a9": {
+        "text": "Sass"
+      },
+      "a10": {
+        "text": "Formik"
+      },
+      "a11": {
+        "text": "Git"
+      },
+      "a12": {
+        "text": "Webpack"
+      },
+      "a13": {
+        "text": "Docker"
+      },
+      "a14": {
+        "text": "Jira"
+      }
+    }
+  }
+}

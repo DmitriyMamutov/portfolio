@@ -1,0 +1,45 @@
+@import "./static/styles/base/variables";
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: $headerZindex;
+  padding: 32px 0;
+  background: linear-gradient(
+    180deg,
+    rgba($colorBlack, 0.5) 0%,
+    rgba($colorBlack, 0) 100%
+  );
+  transform: translateY(-100%);
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+
+    &-list {
+      margin-left: auto;
+      display: flex;
+      justify-content: space-between;
+      max-width: 440px;
+      width: 100%;
+      align-items: center;
+
+      &__item {
+        font-size: 15px;
+        line-height: 24px;
+        color: $colorWhite;
+        letter-spacing: 1px;
+        font-family: $fontHellix;
+        text-transform: uppercase;
+      }
+    }
+
+    &__button {
+      max-width: 160px;
+      width: 100%;
+      margin-left: 56px;
+    }
+  }
+}
