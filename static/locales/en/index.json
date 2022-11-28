@@ -11,7 +11,7 @@
     "description": "I like to do my job to the best of my abilities and always work honestly and responsibly on all of my projects.",
     "items": {
       "i1": {
-        "title": "FRONT-END DEVELOPMENT",
+        "title": "Front-end Development",
         "subtitle": "I have extensive knowledge of HTML, CSS & JavaScript (ES6), TypeScript and experience with React, Next.js. Add ambition, endless curiosity and a GTD‑mindset and you have a pretty complete picture of me."
       },
       "i2": {
@@ -65,6 +65,27 @@
       },
       "a14": {
         "text": "Jira"
+      }
+    }
+  },
+  "questions": {
+    "title": "<span>Six things</span> you probably like to know from me",
+    "items": {
+      "q1": {
+        "title": "Do you have experience with <technology X>?",
+        "text": "I am a real hands-on worker and I am constantly experimenting with new techniques and tools. So I'm used to making things my own quickly. Are you looking for very specific skills? Please contact me to see if I can help you with that!"
+      },
+      "q2": {
+        "title": "Where are you located? Do you work remotely?",
+        "text": "A few years ago I exchanged the Randstad for green Arnhem in the Netherlands. Is Arnhem too far away from your organization? No problem, I'm used to working remotely. A hybrid model (for example x days in the office) is also possible."
+      },
+      "q3": {
+        "title": "What was this site built with?",
+        "text": "React framework Next.js, TypeScript and Tailwind CSS. The initial draft I built with Eleventy, but moved to Next.js for the nicer developer experience. I’m now thinking of porting it to Astro, which is a much better choice for simple landing pages like this (but didn’t exist in 2020). Why? Astro ships zero JavaScript by default and has great lazy loading capabilities out of the box (and is therefore fast). It’s what I’ve used for the Dash landing page also."
+      },
+      "q4": {
+        "title": "Ok, enough about your work, what do you do when you're not in front of your laptop?",
+        "text": "I love trail running around Arnhem where the surroundings are beautiful. I also enjoy playing indoor soccer and watching soccer games. That I also practice meditation and eat vegan probably classifies me as a health nut, but I am a sucker for craft beer ;) (D/T(NE)IPA's!). In my spare time I like to work on one of my side projects. Dash is one of them; a Figma plugin that helps designers speed up their workflow with search and a simple command UI. I really enjoy making tools that make live just a little bit easier."
       }
     }
   }

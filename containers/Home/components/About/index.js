@@ -63,79 +63,109 @@ const About = () => {
             {t("about.description")}
           </div>
           <div className={styles["about-content-list"]}>
-            {ABOUT_LIST.map(({ id, isSubtitle, isIcons, iconsList }) => {
-              return (
-                <div
-                  key={id}
-                  id="about-container"
-                  className={styles["about-content-list-block"]}
-                >
+            {ABOUT_LIST.map(
+              ({ id, isSubtitle, isDescription, isIcons, iconsList }) => {
+                return (
                   <div
-                    className={cn(
-                      styles["about-content-list-block-left"],
-                      "left",
-                    )}
+                    key={id}
+                    id="about-container"
+                    className={styles["about-content-list-block"]}
                   >
                     <div
-                      className={styles["about-content-list-block-left__title"]}
+                      className={cn(
+                        styles["about-content-list-block-left"],
+                        "left",
+                      )}
                     >
-                      {t(`about.items.${id}.title`)}
-                    </div>
-                    {isSubtitle && (
                       <div
-                        className={
-                          styles["about-content-list-block-left__subtitle"]
-                        }
+                        className={cn(
+                          styles["about-content-list-block-left__title"],
+                          {
+                            [styles[
+                              "about-content-list-block-left__title--center"
+                            ]]: isDescription,
+                          },
+                        )}
                       >
-                        {t(`about.items.${id}.subtitle`)}
+                        {t(`about.items.${id}.title`)}
                       </div>
-                    )}
-                  </div>
-                  <div
-                    className={cn(
-                      styles["about-content-list-block-right"],
-                      "right",
-                    )}
-                  >
-                    {isIcons && (
-                      <div
-                        className={
-                          styles["about-content-list-block-right-sublist"]
-                        }
-                      >
-                        {iconsList.map(({ idx, iconUrl }) => {
-                          return (
-                            <div
-                              key={idx}
-                              className={
-                                styles[
-                                  "about-content-list-block-right-sublist-item"
-                                ]
-                              }
-                            >
+                      {isSubtitle && (
+                        <div
+                          className={
+                            styles["about-content-list-block-left__subtitle"]
+                          }
+                        >
+                          {t(`about.items.${id}.subtitle`)}
+                        </div>
+                      )}
+                    </div>
+                    <div
+                      className={cn(
+                        styles["about-content-list-block-right"],
+                        "right",
+                      )}
+                    >
+                      {isIcons && (
+                        <div
+                          className={
+                            styles["about-content-list-block-right-sublist"]
+                          }
+                        >
+                          {iconsList.map(({ idx, iconUrl }) => {
+                            return (
                               <div
+                                key={idx}
                                 className={
                                   styles[
-                                    "about-content-list-block-right-sublist-item__icon"
+                                    "about-content-list-block-right-sublist-item"
                                   ]
                                 }
                               >
-                                <Image
-                                  src={iconUrl}
-                                  alt={idx}
-                                  width={256}
-                                  height={256}
-                                />
+                                <div
+                                  className={
+                                    styles[
+                                      "about-content-list-block-right-sublist-item__icon"
+                                    ]
+                                  }
+                                >
+                                  <Image
+                                    src={iconUrl}
+                                    alt={idx}
+                                    width={256}
+                                    height={256}
+                                  />
+                                </div>
+                                {/* <div
+                                  className={
+                                    styles[
+                                      "about-content-list-block-right-sublist-item__text"
+                                    ]
+                                  }
+                                >
+
+                            {t(`about.icons.${idx}.text`)}
+                                </div> */}
                               </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    )}
+                            );
+                          })}
+                        </div>
+                      )}
+                      {isDescription && (
+                        <div
+                          className={
+                            styles[
+                              "about-content-list-block-right__description"
+                            ]
+                          }
+                        >
+                          {t(`about.items.${id}.description`)}
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              },
+            )}
           </div>
         </div>
       </div>

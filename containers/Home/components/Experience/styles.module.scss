@@ -1,0 +1,118 @@
+@import "./static/styles/base/variables";
+
+.questions {
+  background: $colorFourthBlack;
+  color: $colorWhite;
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+
+  :global {
+    .video {
+      transform: none;
+      opacity: 0.5;
+    }
+  }
+
+  &-list {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .accordion {
+    position: relative;
+    opacity: 0;
+    // transform: translateY(100%);
+
+    &:not(:last-child) {
+      margin-bottom: 56px;
+    }
+
+    &-item {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+
+      &--active {
+        .accordion-item__title {
+          color: $colorWhite;
+        }
+      }
+
+      &__title {
+        font-family: $fontHellix;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 40px;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        color: $colorPressedGrey;
+        transition: $timeMedium;
+        padding-right: 32px;
+      }
+
+      &__icon {
+        width: 24px;
+        height: 24px;
+        position: relative;
+        margin: auto 0;
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 14px;
+          height: 2px;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          background: $colorPressedGrey;
+
+          transition: $timeMedium ease-out;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 2px;
+          height: 14px;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          background: $colorPressedGrey;
+          transition: $timeMedium ease-out;
+        }
+
+        &--active {
+          &:after {
+            transform: translate(-50%, -50%) rotate(-90deg);
+            background: $colorWhite;
+          }
+          &:before {
+            background: $colorWhite;
+          }
+        }
+      }
+    }
+
+    &-hidden_content {
+      font-family: $fontHellix;
+      font-size: 18px;
+      line-height: 32px;
+      padding: 0 56px 0px 0px;
+      height: 0;
+      overflow: hidden;
+      transition: $timeMedium ease-out;
+      display: flex;
+      color: $colorPressedGrey;
+
+      &__text {
+        display: flex;
+        margin-top: 16px;
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ import cn from "classnames";
 import Video from "components/Video";
 import useTranslation from "next-translate/useTranslation";
 import Button from "components/Button";
+import {HERO_VIDEO} from 'config/index';
 
 import styles from "./styles.module.scss";
 
@@ -31,9 +32,10 @@ const Hero = () => {
   }, []);
 
   return (
+    
     <section className={styles["hero"]}>
       <div className={styles["hero__wrapper"]}>
-        <Video />
+        <Video src={HERO_VIDEO}/>
         <div className="container">
           <div className={styles["hero-content"]}>
             <div

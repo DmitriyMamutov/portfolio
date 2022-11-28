@@ -33,7 +33,8 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 16px;
-
+        height: 248px;
+        
         &-left {
           max-width: 50%;
           width: 100%;
@@ -46,10 +47,19 @@
           &__title {
             font-family: $fontHellix;
             letter-spacing: 1px;
-            margin-bottom: 32px;
+            margin-bottom: 8px;
             font-size: 26px;
             line-height: 48px;
             font-weight: 700;
+
+            &--center {
+              align-items: center;
+              height: 100%;
+              display: flex;
+              font-size: 48px;
+              line-height: 72px;
+              margin-bottom: 0;
+            }
           }
 
           &__subtitle {
@@ -96,6 +106,13 @@
                 text-align: center;
               }
             }
+          }
+
+          &__description {
+            color: $colorTertiaryBlack;
+            font-family: $fontHellix;
+            font-size: 17px;
+            line-height: 32px;
           }
         }
       }

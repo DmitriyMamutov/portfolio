@@ -12,7 +12,13 @@
     rgba($colorBlack, 0.5) 0%,
     rgba($colorBlack, 0) 100%
   );
-  transform: translateY(-100%);
+
+  :global {
+    .header {
+      opacity: 0;
+      transform: translateY(-64px);
+    }
+  }
 
   &-content {
     display: flex;
@@ -28,7 +34,7 @@
 
       &__item {
         font-size: 15px;
-        line-height: 24px;
+        line-height: 48px;
         color: $colorWhite;
         letter-spacing: 1px;
         font-family: $fontHellix;
@@ -40,6 +46,7 @@
       max-width: 160px;
       width: 100%;
       margin-left: 56px;
+      position: relative;
     }
   }
 }
