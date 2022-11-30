@@ -2,12 +2,10 @@ import { useState, useEffect, useRef } from "react";
 import useTranslation from "next-translate/useTranslation";
 import cn from "classnames";
 import { gsap } from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-
-import styles from "../styles.module.scss";
+import styles from "./styles.module.scss";
 
 const Accordion = (props) => {
-  const { id } = props;
+  const { id, localeName } = props;
   const { t } = useTranslation("index");
 
   const [listName, setListName] = useState("");
@@ -58,7 +56,7 @@ const Accordion = (props) => {
         })}
       >
         <div className={styles["accordion-item__title"]}>
-          {t(`questions.items.${id}.title`)}
+          {t(`${localeName}.items.${id}.title`)}
         </div>
         <div
           className={cn(styles["accordion-item__icon"], {
@@ -75,10 +73,15 @@ const Accordion = (props) => {
         })}
       >
         <div className={styles["accordion-hidden_content__text"]}>
-          {t(`questions.items.${id}.text`)}
+          {t(`${localeName}.items.${id}.text`)}
         </div>
       </div>
     </div>
   );
 };
+
+Accordion.defaultProps = {
+  localeName: "questions",
+};
+
 export default Accordion;

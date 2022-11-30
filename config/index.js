@@ -1,5 +1,4 @@
 module.exports = {
-
   HERO_VIDEO: "/static/videos/index.mp4",
   QUESTIONS_VIDEO: "/static/videos/questions.mp4",
   ABOUT_LIST: [
@@ -76,11 +75,10 @@ module.exports = {
     },
   ],
 
-  MENU_ITEMS: {
-    courses: {
-      id: "courses",
-    },
-  },
+  S_PRO_LOGO: "/static/images/index/experience/s-pro-white.png",
+  ZNTU_LOGO: "/static/images/index/experience/zntu.png",
+
+  EXPERIENCE_SUBLIST: [{ idx: "w1" }, { idx: "w2" }, { idx: "w3" }, { idx: "w4" }],
 
   QUESTIONS_LIST: [
     {

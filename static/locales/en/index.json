@@ -88,5 +88,38 @@
         "text": "I love trail running around Arnhem where the surroundings are beautiful. I also enjoy playing indoor soccer and watching soccer games. That I also practice meditation and eat vegan probably classifies me as a health nut, but I am a sucker for craft beer ;) (D/T(NE)IPA's!). In my spare time I like to work on one of my side projects. Dash is one of them; a Figma plugin that helps designers speed up their workflow with search and a simple command UI. I really enjoy making tools that make live just a little bit easier."
       }
     }
+  },
+  "experience": {
+    "experienceTitle": "Education",
+    "educationTitle": "Work Experience",
+    "items": {
+      "e1": {
+        "position": "Front-end (React) Developer",
+        "company": "<span>S-PRO</span>, Zaporizhzhia",
+        "time": "February 2021 – to the present",
+        "toolingLess": "Javascript,Typescript, React, Next.js...",
+        "toolingTitle": "Tooling",
+        "toolingMore": "Javascript, Typescript, React, Next.js, Formik, SCSS, Gsap, Git, Webpack, Figma",
+        "workTitle": "Work & reponsibilities",
+        "workItems": {
+          "w1": {
+            "text": "Develop new features and optimisations throughout the entire website"
+          },
+          "w2": {
+            "text": "Develop, optimise and maintain new pages"
+          },
+          "w3": {
+            "idx": "w3",
+            "text": "Website localization"
+          },
+          "w4": {
+            "text": "Develop a website with courses for future employees"
+          }
+        }
+      }
+    },
+    "educationPosition": "Software Engineering (Master degree)",
+    "educationPlace": "Zaporizhzhia Polytechnic National University",
+    "educationYears": "2014-2020"
   }
 }

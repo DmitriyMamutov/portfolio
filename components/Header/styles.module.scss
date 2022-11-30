@@ -1,24 +1,18 @@
 @import "./static/styles/base/variables";
 
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: $headerZindex;
-  padding: 32px 0;
+  padding: 24px 0;
   background: linear-gradient(
     180deg,
-    rgba($colorBlack, 0.5) 0%,
+    rgba($colorBlack, 0.8) 0%,
     rgba($colorBlack, 0) 100%
   );
-
-  :global {
-    .header {
-      opacity: 0;
-      transform: translateY(-64px);
-    }
-  }
+  transform: translateY(-100%);
 
   &-content {
     display: flex;
@@ -28,17 +22,68 @@
       margin-left: auto;
       display: flex;
       justify-content: space-between;
-      max-width: 440px;
+      max-width: 540px;
       width: 100%;
       align-items: center;
 
-      &__item {
+      &-item {
         font-size: 15px;
-        line-height: 48px;
+        line-height: 24px;
         color: $colorWhite;
         letter-spacing: 1px;
         font-family: $fontHellix;
         text-transform: uppercase;
+        cursor: pointer;
+        transition: $timeMedium;
+        position: relative;
+        align-items: center;
+        display: flex;
+        padding: 16px 8px;
+
+        &__text {
+          position: relative;
+          overflow: hidden;
+          margin: auto 0;
+          display: flex;
+          visibility: hidden;
+
+          &::before,
+          &::after {
+            visibility: visible;
+            content: attr(data-text);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            white-space: nowrap;
+            transform: translate3d(-50%, -50%, 0);
+            transition: $timeMedium;
+          }
+
+          &::after {
+            transform: translate3d(-50%, 50%, 0);
+            opacity: 0;
+          }
+        }
+
+        &:hover {
+          opacity: 0.8;
+
+          .header-content-list-item__text {
+            &::before {
+              transform: translate3d(-50%, -150%, 0);
+              opacity: 0;
+            }
+
+            &::after {
+              transform: translate3d(-50%, -50%, 0);
+              opacity: 1;
+            }
+          }
+        }
+
+        &:active {
+          opacity: 0.9;
+        }
       }
     }
 

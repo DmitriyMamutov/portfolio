@@ -14,6 +14,7 @@ const About = () => {
 
   const slideAnimation = () => {
     let leftItem = gsap.utils.toArray(".left");
+    let background = gsap.utils.toArray(".background");
     let rightItem = gsap.utils.toArray(".right");
 
     leftItem.forEach((item) => {
@@ -28,6 +29,23 @@ const About = () => {
       });
       tl.to(item, {
         xPercent: -50,
+      });
+    });
+
+    background.forEach((item) => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: item,
+          markers: false,
+          start: "top bottom",
+          end: "bottom+=400 bottom",
+          scrub: true,
+        },
+      });
+      tl.to(item, {
+        // scaleX: 2,
+        width: '150%'
+
       });
     });
 
@@ -52,7 +70,7 @@ const About = () => {
   }, []);
 
   return (
-    <section className={styles["about"]}>
+    <section className={cn(styles["about"], 'about')}>
       <div className="container">
         <div className={styles["about-content"]}>
           <div
@@ -77,6 +95,12 @@ const About = () => {
                         "left",
                       )}
                     >
+                      <div 
+                       className={cn(
+                        styles["about-content-list-block-left__background"],
+                        "background",
+                      )}
+                      />
                       <div
                         className={cn(
                           styles["about-content-list-block-left__title"],

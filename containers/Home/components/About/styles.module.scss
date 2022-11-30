@@ -34,15 +34,25 @@
         justify-content: space-between;
         margin-bottom: 16px;
         height: 248px;
-        
+
         &-left {
           max-width: 50%;
           width: 100%;
-          background-color: $colorTertiaryBlack;
-          border-radius: 80px;
           padding: 32px 80px;
           transform: translateX(50%);
           position: relative;
+
+          &__background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            // background-color: red;
+            background-color: $colorTertiaryBlack;
+            border-radius: 80px;
+            z-index: -1;
+          }
 
           &__title {
             font-family: $fontHellix;
