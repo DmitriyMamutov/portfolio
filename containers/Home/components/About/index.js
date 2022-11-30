@@ -5,6 +5,8 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import cn from "classnames";
+import Title from "components/Title";
+
 import styles from "./styles.module.scss";
 
 const About = () => {
@@ -44,8 +46,7 @@ const About = () => {
       });
       tl.to(item, {
         // scaleX: 2,
-        width: '150%'
-
+        width: "150%",
       });
     });
 
@@ -70,13 +71,16 @@ const About = () => {
   }, []);
 
   return (
-    <section className={cn(styles["about"], 'about')}>
+    <section className={cn(styles["about"], "about")}>
       <div className="container">
         <div className={styles["about-content"]}>
-          <div
-            className={styles["about-content__title"]}
-            dangerouslySetInnerHTML={{ __html: t("about.title") }}
-          />
+          <Title color="white" size="h2" fontWeight={400}>
+            <div
+              className={styles["about-content__title"]}
+              dangerouslySetInnerHTML={{ __html: t("about.title") }}
+            />
+          </Title>
+
           <div className={styles["about-content__description"]}>
             {t("about.description")}
           </div>
@@ -95,24 +99,26 @@ const About = () => {
                         "left",
                       )}
                     >
-                      <div 
-                       className={cn(
-                        styles["about-content-list-block-left__background"],
-                        "background",
-                      )}
-                      />
                       <div
                         className={cn(
-                          styles["about-content-list-block-left__title"],
-                          {
-                            [styles[
-                              "about-content-list-block-left__title--center"
-                            ]]: isDescription,
-                          },
+                          styles["about-content-list-block-left__background"],
+                          "background",
                         )}
-                      >
-                        {t(`about.items.${id}.title`)}
-                      </div>
+                      />
+                      <Title color="white" size="h5" level={5}>
+                        <div
+                          className={cn(
+                            styles["about-content-list-block-left__title"],
+                            {
+                              [styles[
+                                "about-content-list-block-left__title--center"
+                              ]]: isDescription,
+                            },
+                          )}
+                        >
+                          {t(`about.items.${id}.title`)}
+                        </div>
+                      </Title>
                       {isSubtitle && (
                         <div
                           className={

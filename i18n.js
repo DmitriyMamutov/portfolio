@@ -1,6 +1,6 @@
 module.exports = {
   defaultLocale: "en",
-  locales: ["en", "ua"],
+  locales: ["en"],
   pages: {
     "*": ["common"], // We use one common file for all translations
     "/": ["index"],

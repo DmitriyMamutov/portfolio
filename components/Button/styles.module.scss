@@ -7,7 +7,7 @@
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 1px;
-  background: white;
+  background: $colorWhite;
   border: 0;
   border-radius: 32px;
   user-select: none;
@@ -21,8 +21,7 @@
   justify-content: center;
   text-transform: uppercase;
   font-family: $fontHellix;
-
-  box-shadow: inset 0px 0px 0px 0.5px white;
+  box-shadow: inset 0px 0px 0px 0.5px $colorWhite;
 
   span {
     display: block;
@@ -37,7 +36,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      color: black;
+      color: $colorFourthBlack;
       white-space: nowrap;
       transform: translate3d(-50%, -50%, 0);
       transition: 0.55s cubic-bezier(0, 0.55, 0.45, 1);
@@ -48,9 +47,38 @@
     }
 
     &::after {
-      color: white;
+      color: $colorWhite;
       transform: translate3d(-50%, 140%, 0);
       opacity: 0;
+    }
+  }
+
+  &--footer {
+    max-width: 300px;
+    padding: 16px 16px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 1px;
+    background: transparent;
+    box-shadow: inset 0px 0px 0px 2px $colorWhite;
+
+    span {
+      &:before {
+        color: $colorWhite;
+      }
+
+      &:after {
+        color: $colorFourthBlack !important;
+      }
+    }
+
+    &:active {
+      box-shadow: inset 0px 0px 0px 2px $colorPressedGrey !important;
+
+      .button__fill {
+        background: $colorPressedGrey !important;
+      }
     }
   }
 
@@ -67,6 +95,14 @@
     pointer-events: none;
     transition: background $timeMedium;
     transform: translate3d(0, 80%, 0);
+
+    &--footer {
+      background: $colorWhite;
+
+      &:hover {
+        box-shadow: inset 0px 0px 0px 5px $colorWhite !important;
+      }
+    }
   }
 
   &:hover {

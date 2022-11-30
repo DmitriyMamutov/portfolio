@@ -5,7 +5,8 @@ import cn from "classnames";
 import Video from "components/Video";
 import useTranslation from "next-translate/useTranslation";
 import Button from "components/Button";
-import {HERO_VIDEO} from 'config/index';
+import Title from "components/Title";
+import { HERO_VIDEO } from "config/index";
 
 import styles from "./styles.module.scss";
 
@@ -32,21 +33,22 @@ const Hero = () => {
   }, []);
 
   return (
-    
     <section className={styles["hero"]}>
       <div className={styles["hero__wrapper"]}>
-        <Video src={HERO_VIDEO}/>
+        <Video src={HERO_VIDEO} />
         <div className="container">
           <div className={styles["hero-content"]}>
-            <div
-              className={cn(
-                styles["hero-content__name"],
-                "animation-text",
-                "char",
-              )}
-            >
-              {t("hero.name")}
-            </div>
+            <Title color="white" level={1}>
+              <div
+                className={cn(
+                  styles["hero-content__name"],
+                  "animation-text",
+                  "char",
+                )}
+              >
+                {t("hero.name")}
+              </div>
+            </Title>
             <div
               className={cn(
                 styles["hero-content__position"],

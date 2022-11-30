@@ -7,7 +7,7 @@ const nextConfig = {
   swcMinify: true,
   i18n: {
     defaultLocale: "en", // Should be the same as in i18n file
-    locales: ["en", 'ua'], // Should be the same as in i18n file
+    locales: ["en"], // Should be the same as in i18n file
   },
   webpack(config) {
     config.module.rules.push({

@@ -10,11 +10,6 @@
     position: relative;
 
     &__title {
-      width: 100%;
-      font-size: 56px;
-      line-height: 80px;
-      font-family: $fontHellix;
-      letter-spacing: 1px;
       margin-bottom: 16px;
     }
 
@@ -41,6 +36,9 @@
           padding: 32px 80px;
           transform: translateX(50%);
           position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
 
           &__background {
             width: 100%;
@@ -48,20 +46,13 @@
             position: absolute;
             top: 0;
             left: 0;
-            // background-color: red;
             background-color: $colorTertiaryBlack;
             border-radius: 80px;
             z-index: -1;
           }
 
           &__title {
-            font-family: $fontHellix;
-            letter-spacing: 1px;
             margin-bottom: 8px;
-            font-size: 26px;
-            line-height: 48px;
-            font-weight: 700;
-
             &--center {
               align-items: center;
               height: 100%;

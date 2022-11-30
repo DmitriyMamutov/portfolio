@@ -18,5 +18,17 @@
       }
     },
     "buttonText": "Apply Now"
+  },
+  "footer": {
+    "text": "Feel free to contact me if you're looking for a communicative front-end developer who is passionate about creating great user experiences or just want to have a chat",
+    "buttonText": "Apply Now",
+    "items": {
+      "f1": {
+        "text": "LinkedIn"
+      },
+      "f2": {
+        "text": "Telegram"
+      }
+    }
   }
 }

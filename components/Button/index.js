@@ -4,7 +4,7 @@ import React, { useRef, useState, forwardRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import useMousePosition from "utils/useMousePosition";
 import { distance } from "utils/utils";
-import useHover from 'utils/useHover';
+import useHover from "utils/useHover";
 // eslint-disable-next-line react/display-name
 const Button = forwardRef((props, ref) => {
   const { mouseX, mouseY } = useMousePosition();
@@ -35,7 +35,6 @@ const Button = forwardRef((props, ref) => {
         x = (mouseX + window.scrollX - (rect.left + rect.width / 2)) * 0.2;
         y = (mouseY + window.scrollY - (rect.top + rect.height / 2)) * 0.2;
         node.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-   
       } else {
         // Restore initial position
         node.style.transform = `translate3d(0, 0, 0)`;
@@ -68,10 +67,20 @@ const Button = forwardRef((props, ref) => {
     }
   }, [mouseX, mouseY, hoverRef, fillControls]);
 
-  const { children, className, onClick, id, disabled, type } = props;
+  const { children, className, onClick, id, disabled, type, theme } = props;
 
-  const buttonClass = cn(styles["button"], "button", {}, className);
+  const buttonClass = cn(
+    styles["button"],
+    "button",
+    {
+      [styles["button--footer"]]: theme === "footer",
+    },
+    className,
+  );
 
+  const fillClass = cn(styles["button__fill"], "fill", {
+    [styles["button__fill--footer"]]: theme === "footer",
+  });
 
   return (
     <motion.button
@@ -83,15 +92,9 @@ const Button = forwardRef((props, ref) => {
       role="button"
       aria-pressed="false"
       ref={hoverRef}
-
     >
-      <motion.span data-text={children}>
-        {children}
-      </motion.span>
-      <motion.div
-        animate={fillControls}
-        className={cn(styles["button__fill"], "fill")}
-      />
+      <motion.span data-text={children}>{children}</motion.span>
+      <motion.div animate={fillControls} className={fillClass} />
     </motion.button>
   );
 });

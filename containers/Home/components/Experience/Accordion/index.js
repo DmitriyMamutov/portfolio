@@ -34,8 +34,8 @@ const Accordion = (props) => {
         scrollTrigger: {
           trigger: item,
           markers: false,
-          start: "bottom bottom",
-          end: "bottom+=400 bottom",
+          start: "top bottom",
+          end: "bottom+=50 bottom",
           scrub: true,
         },
       });
@@ -106,6 +106,9 @@ const Accordion = (props) => {
         </div>
         <div className={styles["accordion-hidden_content__text"]}>
           {t(`${localeName}.items.${id}.toolingMore`)}
+        </div>
+        <div className={styles["accordion-hidden_content__title"]}>
+          {t(`${localeName}.items.${id}.workTitle`)}
         </div>
         <ul>
           {EXPERIENCE_SUBLIST.map(({ idx }) => (

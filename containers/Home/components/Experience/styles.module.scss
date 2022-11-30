@@ -5,16 +5,98 @@
   color: $colorWhite;
   position: relative;
   padding: 0px 0 120px;
-  overflow: hidden;
 
+  &-content {
+    display: flex;
+    justify-content: space-between;
 
-  &-content{
-    display:flex;
-    justify-content:space-between;
-
-    &-block{
-      max-width:720px;
+    :global {
+      .item {
+        opacity: 0;
+        transform: translateY(50%);
+      }
+    }
+    &-block {
+      max-width: 720px;
       width: 100%;
+
+      &__title {
+        margin-bottom: 32px;
+      }
+
+      &-accordion {
+        margin-bottom: 72px;
+      }
+
+      &-card {
+        width: 100%;
+        display: flex;
+
+        &__image {
+          max-width: 120px;
+          width: 100%;
+          height: auto;
+        }
+
+        &-text {
+          margin-left: 92px;
+
+          &__position {
+            font-size: 22px;
+            line-height: 32px;
+            font-family: $fontHellix;
+            font-weight: 700;
+            margin-bottom: 4px;
+          }
+
+          &__place {
+            font-size: 18px;
+            line-height: 32px;
+            font-family: $fontHellix;
+            span {
+              font-weight: 700;
+            }
+          }
+
+          &__year {
+            font-size: 17px;
+            line-height: 32px;
+            font-family: $fontHellix;
+          }
+        }
+      }
+    }
+
+    &-what {
+      max-width: 480px;
+      width: 100%;
+      background: #2502c5;
+      padding: 72px;
+      border-radius: 80px;
+      box-shadow: rgba(#2900e8, 0.5) 0px 8px 24px;
+      height:fit-content;
+      &-item {
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+
+        &__title {
+          font-size: 22px;
+          line-height: 32px;
+          font-family: $fontHellix;
+          font-weight: 700;
+          margin-bottom: 4px;
+        }
+
+        &__description {
+          font-size: 18px;
+          line-height: 32px;
+          font-family: $fontHellix;
+          font-weight: 400;
+          color: $colorPressedGrey;
+
+        }
+      }
     }
   }
 }

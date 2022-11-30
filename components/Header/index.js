@@ -44,7 +44,7 @@ const Header = () => {
   useEffect(() => {
     gsap.to(".header", {
       y: 0,
-      duration: 0.5,
+      duration: 1,
       opacity: 1,
     });
   }, []);

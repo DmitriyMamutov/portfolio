@@ -94,4 +94,22 @@ module.exports = {
       id: "q4",
     },
   ],
+
+  WHAT_I_DO_LIST:[
+    {
+      id: 'd1'
+    },
+    {
+      id: 'd2'
+    },
+    {
+      id: 'd3'
+    },
+    {
+      id: 'd4'
+    },
+    {
+      id: 'd5'
+    }
+  ]
 };

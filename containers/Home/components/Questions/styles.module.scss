@@ -4,7 +4,6 @@
   background: $colorFourthBlack;
   color: $colorWhite;
   position: relative;
-  padding: 120px 0;
   overflow: hidden;
 
   :global {
@@ -12,6 +11,11 @@
       transform: none;
       opacity: 0.9;
     }
+  }
+
+  &__wrapper{
+    padding: 120px 0;
+
   }
 
   &__title {

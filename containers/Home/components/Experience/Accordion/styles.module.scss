@@ -3,10 +3,11 @@
 .accordion {
   position: relative;
   opacity: 0;
-  transform: translateY(100%);
+  transform: translateY(50%);
   padding-bottom: 16px;
   border-bottom: 1px solid $colorActiveGrey;
   margin-right: 32px;
+
   &:not(:last-child) {
     margin-bottom: 56px;
   }
@@ -71,44 +72,54 @@
     }
 
     &__icon {
-      width: 64px;
+      width: 24px;
       height: 24px;
       position: absolute;
-    bottom: -12px;
-    right: 0;
-background: $colorFourthBlack;
+      bottom: -24px;
+      right: 0;
+      background: $colorFourthBlack;
+      padding: 24px 0 24px 39px;
+      transition: $timeMedium ease-out;
+
+      &:hover {
+        transform: translateY(4px);
+      }
+
       &:before {
         content: "";
         position: absolute;
-        width: 14px;
+        width: 12px;
         height: 2px;
-        left: 50%;
+        left: 25%;
         top: 50%;
-        transform: translate(-50%, -50%);
-        background: $colorPressedGrey;
+        transform: translate(0%, -50%) rotate(45deg);
+        background: $colorActiveGrey;
+        border-radius: 4px;
 
-        transition: $timeMedium ease-out;
+        transition: $timeMedium cubic-bezier(0.25, 1.7, 0.35, 0.8);
       }
 
       &:after {
         content: "";
         position: absolute;
-        width: 2px;
-        height: 14px;
-        left: 50%;
+        width: 12px;
+        height: 2px;
+        right: 25%;
         top: 50%;
-        transform: translate(-50%, -50%);
-        background: $colorPressedGrey;
-        transition: $timeMedium ease-out;
+        transform: translate(0%, -50%) rotate(-45deg);
+        background: $colorActiveGrey;
+        border-radius: 4px;
+        transition: $timeMedium cubic-bezier(0.25, 1.7, 0.35, 0.8);
       }
 
       &--active {
         &:after {
-          transform: translate(-50%, -50%) rotate(-90deg);
+          transform: translate(0%, -50%) rotate(45deg);
           background: $colorWhite;
         }
         &:before {
           background: $colorWhite;
+          transform: translate(0%, -50%) rotate(-45deg);
         }
       }
     }
@@ -145,19 +156,18 @@ background: $colorFourthBlack;
       margin-bottom: 16px;
     }
 
-    ul{
-      padding-inline-start:30px;
-      margin:0;
+    ul {
+      padding-inline-start: 30px;
+      margin: 0;
 
-      li{
+      li {
         font-size: 17px;
         line-height: 32px;
         font-family: $fontHellix;
-        &:not(:last-child){
-          margin-bottom:4px;
+        &:not(:last-child) {
+          margin-bottom: 4px;
         }
       }
-
     }
   }
 }

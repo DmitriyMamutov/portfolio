@@ -1,0 +1,115 @@
+@import "./static/styles/base/variables";
+
+.title {
+  letter-spacing: 1px;
+
+  span {
+    font-weight: 400;
+  }
+
+  &--300 {
+    font-weight: 300;
+  }
+
+  &--400 {
+    font-weight: 400;
+  }
+
+  &--500 {
+    font-weight: 500;
+  }
+
+  &--600 {
+    font-weight: 600;
+  }
+
+  &--700 {
+    font-weight: 700;
+  }
+
+  &--800 {
+    font-weight: 800;
+  }
+
+  &--hellix {
+    font-family: $fontHellix;
+  }
+
+  &--black {
+    color: $colorPrimaryBlack;
+  }
+
+  &--white {
+    color: $colorWhite;
+  }
+
+  &--h1 {
+    font-size: 112px;
+    line-height: 112px;
+
+    @media (max-width: 768px) {
+      font-size: 56px;
+      line-height: 80px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 48px;
+      line-height: 72px;
+    }
+  }
+
+  &--h2 {
+    font-size: 56px;
+    line-height: 80px;
+
+    @media (max-width: 768px) {
+      font-size: 48px;
+      line-height: 72px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 30px;
+      line-height: 48px;
+    }
+  }
+
+  &--h3 {
+    font-size: 48px;
+    line-height: 72px;
+
+    @media (max-width: 480px) {
+      font-size: 30px;
+      line-height: 48px;
+    }
+  }
+
+  &--h4 {
+    font-size: 30px;
+    line-height: 48px;
+
+    @media (max-width: 480px) {
+      font-size: 26px;
+      line-height: 48px;
+    }
+  }
+
+  &--h5 {
+    font-size: 26px;
+    line-height: 48px;
+
+    @media (max-width: 480px) {
+      font-size: 22px;
+      line-height: 40px;
+    }
+  }
+
+  &--h6 {
+    font-size: 22px;
+    line-height: 40px;
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+}

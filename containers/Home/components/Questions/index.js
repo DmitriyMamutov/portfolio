@@ -11,16 +11,18 @@ const Questions = () => {
 
   return (
     <section className={cn(styles["questions"], "questions")}>
-      <Video src={QUESTIONS_VIDEO} />
-      <div
-        className={styles["questions__title"]}
-        dangerouslySetInnerHTML={{ __html: t("questions.title") }}
-      />
-      <div className="container">
-        <div className={styles["questions-list"]}>
-          {QUESTIONS_LIST.map(({ id }) => {
-            return <Accordion key={id} id={id} />;
-          })}
+      <div className={cn(styles["questions__wrapper"], "questions__wrapper")}>
+        <Video src={QUESTIONS_VIDEO} />
+        <div
+          className={styles["questions__title"]}
+          dangerouslySetInnerHTML={{ __html: t("questions.title") }}
+        />
+        <div className="container">
+          <div className={styles["questions-list"]}>
+            {QUESTIONS_LIST.map(({ id }) => {
+              return <Accordion key={id} id={id} />;
+            })}
+          </div>
         </div>
       </div>
     </section>

@@ -90,14 +90,14 @@
     }
   },
   "experience": {
-    "experienceTitle": "Education",
-    "educationTitle": "Work Experience",
+    "experienceTitle": "Work Experience",
+    "educationTitle": "Education",
     "items": {
       "e1": {
         "position": "Front-end (React) Developer",
         "company": "<span>S-PRO</span>, Zaporizhzhia",
         "time": "February 2021 – to the present",
-        "toolingLess": "Javascript,Typescript, React, Next.js...",
+        "toolingLess": "Javascript,Typescript, React, Next.js ...",
         "toolingTitle": "Tooling",
         "toolingMore": "Javascript, Typescript, React, Next.js, Formik, SCSS, Gsap, Git, Webpack, Figma",
         "workTitle": "Work & reponsibilities",
@@ -120,6 +120,29 @@
     },
     "educationPosition": "Software Engineering (Master degree)",
     "educationPlace": "Zaporizhzhia Polytechnic National University",
-    "educationYears": "2014-2020"
+    "educationYears": "2014-2020",
+    "whatItems": {
+      "d1": {
+        "title": "What I do",
+        "description": "Front-end developer"
+      },
+      "d2": {
+        "title": "Languages",
+        "description": "TypeScript, JavaScript, HTML, CSS/Sass/BEM"
+      },
+      "d3": {
+        "title": "Frameworks",
+        "description": "React, Next.js"
+      },
+      "d4": {
+        "title": "Build tool",
+        "description": "Webpack"
+      },
+      "d5": {
+        "title": "Experience with",
+        "description": "Redux, Redux Saga, Formik, Git"
+      }
+    },
+    "botomText": "These are just a few of the technologies I’ve worked with. Are you looking for specific skills? Don't hesitate to ask!"
   }
 }

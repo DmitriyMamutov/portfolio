@@ -1,0 +1,49 @@
+@import "./static/styles/base/variables";
+
+.footer {
+  background: $colorFourthBlack;
+  padding: 120px 0 80px;
+  color: $colorWhite;
+
+  &-content {
+    max-width: 900px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+
+    &__text {
+      font-size: 20px;
+      line-height: 32px;
+      font-family: $fontHellix;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    &__button {
+      margin: 0 auto 56px;
+    }
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      max-width: 96px;
+      width: 100%;
+      margin: 0 auto;
+
+      &-item {
+        max-width: 32px;
+        width: 100%;
+        cursor: pointer;
+        transition: $timeMedium;
+
+        &:hover{
+          opacity: 0.7;
+        }
+
+        &:active{
+          opacity: 0.85;
+        }
+      }
+    }
+  }
+}
