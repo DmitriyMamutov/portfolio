@@ -36,7 +36,7 @@ const Accordion = (props) => {
           markers: false,
           start: "top bottom",
           end: "bottom+=50 bottom",
-          scrub: true,
+          scrub: 1,
         },
       });
       tl.to(item, {

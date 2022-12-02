@@ -91,7 +91,7 @@
     height: 250%;
     display: block;
     border-radius: 50%;
-    background: #2502c5;
+    background: $colorPrimaryBlue;
     pointer-events: none;
     transition: background $timeMedium;
     transform: translate3d(0, 80%, 0);
@@ -106,7 +106,7 @@
   }
 
   &:hover {
-    box-shadow: inset 0px 0px 0px 0.5px #2502c5;
+    box-shadow: inset 0px 0px 0px 0.5px $colorPrimaryBlue;
 
     span {
       &::before {
@@ -115,7 +115,7 @@
       }
 
       &::after {
-        color: white;
+        color: $colorWhite;
         transform: translate3d(-50%, -50%, 0);
         opacity: 1;
       }
@@ -123,10 +123,10 @@
   }
 
   &:active {
-    box-shadow: inset 0px 0px 0px 0.5px #2900e8;
+    box-shadow: inset 0px 0px 0px 0.5px $colorSecondaryBlue;
 
     .button__fill {
-      background: #2900e8;
+      background: $colorSecondaryBlue;
     }
   }
 }

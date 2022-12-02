@@ -70,11 +70,11 @@
     &-what {
       max-width: 480px;
       width: 100%;
-      background: #2502c5;
+      background: $colorPrimaryBlue;
       padding: 72px;
       border-radius: 80px;
-      box-shadow: rgba(#2900e8, 0.5) 0px 8px 24px;
-      height:fit-content;
+      box-shadow: rgba($colorSecondaryBlue, 0.5) 0px 8px 24px;
+      height: fit-content;
       &-item {
         &:not(:last-child) {
           margin-bottom: 16px;
@@ -94,7 +94,6 @@
           font-family: $fontHellix;
           font-weight: 400;
           color: $colorPressedGrey;
-
         }
       }
     }

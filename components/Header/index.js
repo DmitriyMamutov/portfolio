@@ -54,13 +54,13 @@ const Header = () => {
       <div className="container">
         <div className={styles["header-content"]}>
           <div className={styles["header-content-list"]}>
-            {HEADER_LIST.map(({ id, to }) => {
+            {HEADER_LIST.map(({ id, to, offset }) => {
               return (
                 <Link
                   className={styles["header-content-list-item"]}
                   key={id}
                   to={to}
-                  offset={0}
+                  offset={offset}
                   smooth={true}
                   duration={800}
                 >

@@ -22,8 +22,8 @@ const Experience = () => {
           trigger: item,
           markers: false,
           start: "top bottom",
-          end: "bottom+=200 bottom",
-          scrub: true,
+          end: "bottom+=100 bottom",
+          scrub: 1,
         },
       });
       tl.to(item, {

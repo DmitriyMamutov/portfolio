@@ -26,7 +26,7 @@ const About = () => {
           markers: false,
           start: "top bottom",
           end: "bottom+=400 bottom",
-          scrub: true,
+          scrub: 1,
         },
       });
       tl.to(item, {

@@ -31,9 +31,11 @@ const Accordion = (props) => {
         scrollTrigger: {
           trigger: item,
           markers: false,
-          start: "bottom bottom",
-          end: "bottom+=400 bottom",
-          scrub: true,
+          start: "top bottom",
+          end: "bottom+=150 bottom",
+          // start: "bottom bottom",
+          // end: "bottom+=400 bottom",
+          scrub: 1,
         },
       });
       tl.to(item, {

@@ -1,10 +1,11 @@
 {
   "metaTitle": "Dmytro Mamutov | Frontend Developer",
+  "metaDescription": "Feel free to contact me if you're looking for a communicative front-end developer who is passionate about creating great user experiences or just want to have a chat.",
   "hero": {
     "name": "Dmytro Mamutov",
     "position": "Frontend Developer",
     "description": "I enjoy building solid and user-friendly web applications using my experience in TypeScript, React and Next.js. ",
-    "buttonText": "Apply Now"
+    "buttonText": "Contact Me"
   },
   "about": {
     "title": "<b>2+ years of work experience</b> in making responsive and cross-browser websites",
@@ -144,5 +145,16 @@
       }
     },
     "botomText": "These are just a few of the technologies I’ve worked with. Are you looking for specific skills? Don't hesitate to ask!"
+  },
+  "works": {
+    "title": "My Works",
+    "items": {
+      "w1": {
+        "title": "S-PRO website"
+      },
+      "w2": {
+        "title": "S-PRO academy"
+      }
+    }
   }
 }

@@ -14,6 +14,12 @@
       display: flex;
     }
 
+    .video {
+      transform: scaleX(-1);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
     .char {
       transform: translateY(100%);
       opacity: 0;

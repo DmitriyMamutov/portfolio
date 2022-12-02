@@ -17,10 +17,28 @@
       font-family: $fontHellix;
       text-align: center;
       margin-bottom: 48px;
+
+      // a{
+      //   background-color: white;
+      //   // color: 
+      //   padding: 2px 4px;
+      //   transition: $timeMedium;
+
+      //   &:hover{
+      //     opacity: 0.7;
+      //   }
+
+      //   &:active{
+      //     opacity: 0.85;
+      //   }
+      // }
     }
 
     &__button {
-      margin: 0 auto 56px;
+      margin-bottom:56px;
+      display: flex;
+      display: flex;
+      justify-content: center;
     }
 
     &-list {

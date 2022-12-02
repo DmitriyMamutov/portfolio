@@ -14,14 +14,15 @@
         "text": "Questions"
       },
       "l5": {
-        "text": "Contact"
+        "text": "Contacts"
       }
     },
-    "buttonText": "Apply Now"
+    "buttonText": "Contact Me"
   },
   "footer": {
+    "textSecond": "Feel free to <a href='mailto:dmitriy.mamutov@gmail.com'>contact me</a>  if you're looking for a communicative front-end developer who is passionate about creating great user experiences or just want to have a chat",
     "text": "Feel free to contact me if you're looking for a communicative front-end developer who is passionate about creating great user experiences or just want to have a chat",
-    "buttonText": "Apply Now",
+    "buttonText": "Contact Me",
     "items": {
       "f1": {
         "text": "LinkedIn"

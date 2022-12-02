@@ -23,7 +23,7 @@ const Footer = () => {
           markers: false,
           start: "top+=100 bottom",
           end: "bottom bottom",
-          scrub: true,
+          scrub: 1,
         },
       });
       tl.to(item, {
@@ -42,12 +42,17 @@ const Footer = () => {
     <footer className={cn(styles["footer"], "footer")}>
       <div className="container">
         <div className={styles["footer-content"]}>
-          <div className={styles["footer-content__text"]}>
-            {t("footer.text")}
-          </div>
-          <Button className={styles["footer-content__button"]} theme={"footer"}>
-            {t("footer.buttonText")}
-          </Button>
+          <div
+            className={styles["footer-content__text"]}
+            dangerouslySetInnerHTML={{ __html: t("footer.text") }}
+          />
+
+          <a
+            className={styles["footer-content__button"]}
+            href="mailto:dmitriy.mamutov@gmail.com"
+          >
+            <Button theme={"footer"}>{t("footer.buttonText")}</Button>
+          </a>
 
           <div className={styles["footer-content-list"]}>
             {FOOTER_LIST.map(({ url, id, iconUrl }) => {

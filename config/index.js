@@ -78,7 +78,12 @@ module.exports = {
   S_PRO_LOGO: "/static/images/index/experience/s-pro-white.png",
   ZNTU_LOGO: "/static/images/index/experience/zntu.png",
 
-  EXPERIENCE_SUBLIST: [{ idx: "w1" }, { idx: "w2" }, { idx: "w3" }, { idx: "w4" }],
+  EXPERIENCE_SUBLIST: [
+    { idx: "w1" },
+    { idx: "w2" },
+    { idx: "w3" },
+    { idx: "w4" },
+  ],
 
   QUESTIONS_LIST: [
     {
@@ -95,21 +100,42 @@ module.exports = {
     },
   ],
 
-  WHAT_I_DO_LIST:[
+  WORKS_LIST: [
     {
-      id: 'd1'
+      id: "w1",
+      imageUrl: "/static/images/index/works/s-pro.png",
+      width: 240,
+      height: 90,
+      videoUrl: "/static/videos/s-pro.mp4",
+      color: "white",
+      url: "https://s-pro.io/",
     },
     {
-      id: 'd2'
+      id: "w2",
+      imageUrl: "/static/images/index/works/academy.png",
+      width: 312,
+      height: 96,
+      videoUrl: "/static/videos/academy.mp4",
+      color: "violet",
+      url: "https://academy.s-pro.io/",
+    },
+  ],
+
+  WHAT_I_DO_LIST: [
+    {
+      id: "d1",
     },
     {
-      id: 'd3'
+      id: "d2",
     },
     {
-      id: 'd4'
+      id: "d3",
     },
     {
-      id: 'd5'
-    }
-  ]
+      id: "d4",
+    },
+    {
+      id: "d5",
+    },
+  ],
 };

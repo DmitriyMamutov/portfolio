@@ -3,22 +3,27 @@ module.exports = {
     {
       id: "l1",
       to: "about",
+      offset: 60,
     },
     {
       id: "l2",
       to: "experience",
+      offset: -80,
     },
     {
       id: "l3",
       to: "works",
+      offset: 0,
     },
     {
       id: "l4",
       to: "questions",
+      offset: 0,
     },
     {
       id: "l5",
       to: "footer",
+      offset: 0,
     },
   ],
 

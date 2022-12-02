@@ -72,7 +72,7 @@ const Hero = () => {
                 "animation-opacity",
               )}
             >
-              <a href="mailto:dmitriy.mamutov@gmail.com?subject=Mail from Our Site">
+              <a href="mailto:dmitriy.mamutov@gmail.com">
                 <Button>{t("hero.buttonText")}</Button>
               </a>
             </div>
