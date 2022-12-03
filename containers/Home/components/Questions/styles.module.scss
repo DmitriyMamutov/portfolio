@@ -12,25 +12,31 @@
       transform: none;
       opacity: 0.9;
       position: absolute;
-      top: 50%;
-      right: 50%;
       width: 100%;
-      transform: translate(50%, -50%);
+      top: 0;
+      left: 0;
 
+      @media (max-width: 1240px) {
+        transform: scale(2);
+      }
       @media (max-width: 980px) {
-        transform: translate(50%, -50%) scale(2);
+        transform: scale(3);
       }
 
-      @media (max-width: 560px) {
-        transform: translate(50%, -50%) scale(2.5);
+      @media (max-width: 640px) {
+        transform: scale(4);
+      }
+
+      @media (max-width: 570px) {
+        transform: scale(6);
       }
 
       @media (max-width: 420px) {
-        transform: translate(50%, -50%) scale(3.3);
+        transform: scale(8);
       }
 
       @media (max-width: 365px) {
-        transform: translate(50%, -50%) scale(4);
+        transform: scale(10);
       }
     }
   }
