@@ -5,14 +5,20 @@ const Document = () => {
     <Html lang='ua'>
       <Head>
         <link className='logo' rel="icon" href={WEBSITE_LOGO} />
-        {/* <link
+        <link
           rel="preload"
-          href="/static/fonts/MontserratCyrillic/Montserrat-Regular.ttf"
+          href="/static/fonts/Hellix/Hellix-Bold.woff2"
           as="font"
-          type="font/ttf"
+          type="font/woff2"
           crossOrigin="anonymous"
-        /> */}
-
+        />
+     <link
+          rel="preload"
+          href="/static/fonts/Hellix/Hellix-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
       </Head>
 
       <body>
