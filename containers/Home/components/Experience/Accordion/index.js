@@ -3,7 +3,7 @@ import useTranslation from "next-translate/useTranslation";
 import cn from "classnames";
 import { gsap } from "gsap";
 import Image from "next/image";
-import { S_PRO_LOGO, EXPERIENCE_SUBLIST } from "config/index";
+import { ZNTU_LOGO, EXPERIENCE_SUBLIST } from "config/index";
 
 import styles from "./styles.module.scss";
 
@@ -83,10 +83,12 @@ const Accordion = (props) => {
         <div className={styles["accordion-item-content"]}>
           <div className={styles["accordion-item-content__image"]}>
             <Image
-              src={S_PRO_LOGO}
+              src={ZNTU_LOGO}
               alt={t(`${localeName}.items.${id}.position`)}
-              width={240}
-              height={90}
+            //   width={240}
+            //   height={90}
+            width={509}
+            height={599}
             />
           </div>
 
