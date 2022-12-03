@@ -75,7 +75,7 @@ module.exports = {
     },
   ],
 
-  S_PRO_LOGO: "/static/images/index/experience/s-pro-white.png",
+  S_PRO_LOGO: "/static/images/index/experience/s-pro-white-new.png",
   ZNTU_LOGO: "/static/images/index/experience/zntu.png",
 
   EXPERIENCE_SUBLIST: [
