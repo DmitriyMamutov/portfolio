@@ -1,15 +1,33 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import cn from "classnames";
 import gsap from "gsap";
-import Button from "components/Button";
 import useTranslation from "next-translate/useTranslation";
-import { Link } from "react-scroll";
-import { HEADER_LIST } from "config/common";
+import useMediaQuery from "hooks/UseMediaQuery";
+
+import dynamic from "next/dynamic";
+const HeaderContent = dynamic(() => import("./HeaderContent"), {
+  ssr: false,
+});
+const Menu = dynamic(() => import("components/Menu"), {
+  ssr: false,
+});
 
 import styles from "./styles.module.scss";
 
 const Header = () => {
   const { t } = useTranslation("common");
+
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+  const isBreakpoint = useMediaQuery(800);
+
+  const toggleMenu = () => {
+    setMenuIsOpen(!menuIsOpen);
+  };
+
+  const hideMenu = () => {
+    setMenuIsOpen(false);
+  };
 
   const headsUp = (el) => {
     let elH = el.clientHeight,
@@ -42,6 +60,18 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
+    if (menuIsOpen && isBreakpoint) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+
+      return () => {
+        document.body.style.overflow = "visible";
+      };
+    }
+  }, [menuIsOpen, isBreakpoint]);
+
+  useEffect(() => {
     gsap.to(".header", {
       y: 0,
       duration: 1,
@@ -49,40 +79,61 @@ const Header = () => {
     });
   }, []);
 
+  const menuWrapperClass = cn(styles["header__menu-wrapper"], {
+    [styles["header__menu-wrapper--open"]]: menuIsOpen,
+  });
+  const headerMobileButton = cn(styles["header-button"], {
+    [styles["header-button--active"]]: menuIsOpen,
+  });
+
+  const headerMobileButtonTop = cn(
+    styles["header-button__top"],
+    styles["header-button__line"],
+    {
+      [styles["header-button__top--active"]]: menuIsOpen,
+    },
+  );
+
+  const headerMobileButtonMiddle = cn(
+    styles["header-button__middle"],
+    styles["header-button__line"],
+    {
+      [styles["header-button__middle--active"]]: menuIsOpen,
+    },
+  );
+
+  const headerMobileButtonBottom = cn(
+    styles["header-button__bottom"],
+    styles["header-button__line"],
+    {
+      [styles["header-button__bottom--active"]]: menuIsOpen,
+    },
+  );
+
   return (
-    <header className={cn(styles["header"], "header")}>
-      <div className="container">
-        <div className={styles["header-content"]}>
-          <div className={styles["header-content-list"]}>
-            {HEADER_LIST.map(({ id, to, offset }) => {
-              return (
-                <Link
-                  className={styles["header-content-list-item"]}
-                  key={id}
-                  to={to}
-                  offset={offset}
-                  smooth={true}
-                  duration={800}
-                >
-                  <div
-                    className={styles["header-content-list-item__text"]}
-                    data-text={t(`header.items.${id}.text`)}
-                  >
-                    {t(`header.items.${id}.text`)}
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-          <a
-            className={styles["header-content__button"]}
-            href="mailto:dmitriy.mamutov@gmail.com"
-          >
-            <Button>{t("header.buttonText")}</Button>
-          </a>
+    <>
+      <header className={cn(styles["header"], "header")}>
+        <div className="container">
+          {isBreakpoint ? (
+            <>
+              <div className={styles["header-content"]}>
+                <div onClick={toggleMenu} className={headerMobileButton}>
+                  <div className={headerMobileButtonTop} />
+                  <div className={headerMobileButtonMiddle} />
+                  <div className={headerMobileButtonBottom} />
+                </div>
+              </div>
+
+              <div className={menuWrapperClass}>
+                <Menu onClick={hideMenu} />
+              </div>
+            </>
+          ) : (
+            <HeaderContent />
+          )}
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
 

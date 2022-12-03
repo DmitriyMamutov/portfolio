@@ -15,20 +15,38 @@ const Hero = () => {
 
   useEffect(() => {
     const myText = new SplitType(".animation-text");
+    let mm = gsap.matchMedia();
+    mm.add("(min-width: 801px)", () => {
+      gsap.to(".char", {
+        y: 0,
+        stagger: 0.007,
+        delay: 0,
+        opacity: 1,
+        duration: 0.5,
+      });
 
-    gsap.to(".char", {
-      y: 0,
-      stagger: 0.007,
-      delay: 0,
-      opacity: 1,
-      duration: 0.5,
+      gsap.to(".animation-opacity", {
+        opacity: 1,
+        y: 0,
+        delay: 0.45,
+        duration: 1,
+      });
     });
+    mm.add("(max-width: 800px)", () => {
+      gsap.to(".char", {
+        y: 0,
+        stagger: 0,
+        delay: 0,
+        opacity: 1,
+        duration: 1,
+      });
 
-    gsap.to(".animation-opacity", {
-      opacity: 1,
-      y: 0,
-      delay: 0.45,
-      duration: 1,
+      gsap.to(".animation-opacity", {
+        opacity: 1,
+        y: 0,
+        delay: 0,
+        duration: 1,
+      });
     });
   }, []);
 

@@ -27,7 +27,9 @@ const Accordion = (props) => {
   };
 
   const slideAnimation = () => {
-    let accrodionItem = gsap.utils.toArray(".accordion");
+    let accrodionItem = gsap.utils.toArray(".accordion-item");
+    let mm = gsap.matchMedia();
+    mm.add("(min-width: 801px)", () => {
 
     accrodionItem.forEach((item) => {
       let tl = gsap.timeline({
@@ -44,6 +46,26 @@ const Accordion = (props) => {
         opacity: 1,
       });
     });
+  })
+
+  mm.add("(max-width: 800px)", () => {
+
+    accrodionItem.forEach((item) => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: item,
+          markers: false,
+          start: "top bottom",
+          end: "bottom bottom",
+          scrub: false,
+        },
+      });
+      tl.to(item, {
+        y: 0,
+        opacity: 1,
+      });
+    });
+  })
   };
 
   useEffect(() => {
@@ -51,7 +73,7 @@ const Accordion = (props) => {
   }, []);
 
   return (
-    <div className={cn(styles["accordion"], "accordion")} key={id}>
+    <div className={cn(styles["accordion"], "accordion-item")} key={id}>
       <div
         onClick={handleOpenList(id)}
         className={cn(styles["accordion-item"], {

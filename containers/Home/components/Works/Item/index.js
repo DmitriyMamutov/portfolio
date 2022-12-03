@@ -66,9 +66,9 @@ const Works = (props) => {
           </a>
         </Link>
 
-        {/* <div className={styles["works-list-item-text__description"]}>
-          {t(`works.items.${id}.title`)}
-        </div> */}
+        <div className={styles["works-list-item-text__description"]}>
+          {t(`works.items.${id}.description`)}
+        </div>
       </div>
       <div className={videoClass}>
         <video ref={ref} loop muted>

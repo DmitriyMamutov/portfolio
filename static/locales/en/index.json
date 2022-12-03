@@ -3,7 +3,7 @@
   "metaDescription": "Feel free to contact me if you're looking for a communicative front-end developer who is passionate about creating great user experiences or just want to have a chat.",
   "hero": {
     "name": "Dmytro Mamutov",
-    "position": "Frontend Developer",
+    "position": "Front-end Developer",
     "description": "I enjoy building solid and user-friendly web applications using my experience in TypeScript, React and Next.js. ",
     "buttonText": "Contact Me"
   },
@@ -17,11 +17,11 @@
       },
       "i2": {
         "title": "Fast Support",
-        "description": "We aim to be as available and supportive as we can to our clients. Feel free to use the form below or contact us directly with questions or requests."
+        "description": "I aim to be as available and supportive as I can to my clients. Feel free to contact me directly with questions or requests."
       },
       "i3": {
         "title": "SEO",
-        "description": "Using our expertise along with handy tools we strive for a high SEO score, ensuring higher visibility on search sites such as Google."
+        "description": "Using my expertise along with handy tools I strive for a high SEO score, ensuring higher visibility on search sites such as Google."
       }
     },
     "icons": {
@@ -70,7 +70,7 @@
     }
   },
   "questions": {
-    "title": "<span>Six things</span> you probably like to know from me",
+    "title": "<span>Four things</span> you probably like to know from me",
     "items": {
       "q1": {
         "title": "Do you have experience with <technology X>?",
@@ -78,15 +78,15 @@
       },
       "q2": {
         "title": "Where are you located? Do you work remotely?",
-        "text": "A few years ago I exchanged the Randstad for green Arnhem in the Netherlands. Is Arnhem too far away from your organization? No problem, I'm used to working remotely. A hybrid model (for example x days in the office) is also possible."
+        "text": "A year ago I exchanged Zaporizhzhia for Lviv in the Ukraine. Is Lviv too far away from your organization? No problem, I'm used to working remotely. A hybrid model (for example x days in the office) is also possible."
       },
       "q3": {
         "title": "What was this site built with?",
-        "text": "React framework Next.js, TypeScript and Tailwind CSS. The initial draft I built with Eleventy, but moved to Next.js for the nicer developer experience. I’m now thinking of porting it to Astro, which is a much better choice for simple landing pages like this (but didn’t exist in 2020). Why? Astro ships zero JavaScript by default and has great lazy loading capabilities out of the box (and is therefore fast). It’s what I’ve used for the Dash landing page also."
+        "text": "React framework Next.js, TypeScript and CSS modules. For animations I used Gsap library."
       },
       "q4": {
         "title": "Ok, enough about your work, what do you do when you're not in front of your laptop?",
-        "text": "I love trail running around Arnhem where the surroundings are beautiful. I also enjoy playing indoor soccer and watching soccer games. That I also practice meditation and eat vegan probably classifies me as a health nut, but I am a sucker for craft beer ;) (D/T(NE)IPA's!). In my spare time I like to work on one of my side projects. Dash is one of them; a Figma plugin that helps designers speed up their workflow with search and a simple command UI. I really enjoy making tools that make live just a little bit easier."
+        "text": "I like to work out in the gym and walking through the old part of the city. I also enjoy playing soccer and watching soccer games. In my spare time I like to work on one of my side projects. I really enjoy making tools that make live just a little bit easier."
       }
     }
   },
@@ -150,10 +150,12 @@
     "title": "My Works",
     "items": {
       "w1": {
-        "title": "S-PRO website"
+        "title": "S-PRO website",
+        "description": "S-PRO is a software development & consulting company."
       },
       "w2": {
-        "title": "S-PRO academy"
+        "title": "S-PRO academy",
+        "description": "Website for training future employees."
       }
     }
   }

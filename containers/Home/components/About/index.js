@@ -15,55 +15,79 @@ const About = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   const slideAnimation = () => {
+    let mm = gsap.matchMedia();
+
     let leftItem = gsap.utils.toArray(".left");
     let background = gsap.utils.toArray(".background");
     let rightItem = gsap.utils.toArray(".right");
+    let block = gsap.utils.toArray(".block");
 
-    leftItem.forEach((item) => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: item,
-          markers: false,
-          start: "top bottom",
-          end: "bottom+=400 bottom",
-          scrub: 1,
-        },
+    mm.add("(min-width: 801px)", () => {
+      leftItem.forEach((item) => {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: item,
+            markers: false,
+            start: "top bottom",
+            end: "bottom+=400 bottom",
+            scrub: 1,
+          },
+        });
+        tl.to(item, {
+          xPercent: -50,
+        });
       });
-      tl.to(item, {
-        xPercent: -50,
+
+      background.forEach((item) => {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: item,
+            markers: false,
+            start: "top bottom",
+            end: "bottom+=400 bottom",
+            scrub: 1,
+          },
+        });
+        tl.to(item, {
+          // scaleX: 2,
+          width: "150%",
+        });
+      });
+
+      rightItem.forEach((item) => {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: item,
+            markers: false,
+            start: "top bottom",
+            end: "bottom+=400 bottom",
+            scrub: 1,
+          },
+        });
+        tl.to(item, {
+          xPercent: 0,
+        });
       });
     });
 
-    background.forEach((item) => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: item,
-          markers: false,
-          start: "top bottom",
-          end: "bottom+=400 bottom",
-          scrub: true,
-        },
-      });
-      tl.to(item, {
-        // scaleX: 2,
-        width: "150%",
+    mm.add("(max-width: 800px)", () => {
+      block.forEach((item) => {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: item,
+            markers: false,
+            start: "top bottom",
+            end: "bottom bottom",
+            scrub: false,
+          },
+        });
+        tl.to(item, {
+          y: 0,
+          opacity: 1,
+        });
       });
     });
 
-    rightItem.forEach((item) => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: item,
-          markers: false,
-          start: "top bottom",
-          end: "bottom+=400 bottom",
-          scrub: true,
-        },
-      });
-      tl.to(item, {
-        xPercent: 0,
-      });
-    });
   };
 
   useEffect(() => {
@@ -91,7 +115,7 @@ const About = () => {
                   <div
                     key={id}
                     id="about-container"
-                    className={styles["about-content-list-block"]}
+                    className={cn(styles["about-content-list-block"], 'block')}
                   >
                     <div
                       className={cn(

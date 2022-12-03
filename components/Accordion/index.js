@@ -33,8 +33,6 @@ const Accordion = (props) => {
           markers: false,
           start: "top bottom",
           end: "bottom+=150 bottom",
-          // start: "bottom bottom",
-          // end: "bottom+=400 bottom",
           scrub: 1,
         },
       });

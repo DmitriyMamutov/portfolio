@@ -6,9 +6,21 @@
   position: relative;
   padding: 0px 0 120px;
 
+  @media (max-width: 1024px) {
+    padding: 0px 0 96px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0px 0 64px;
+  }
+
   &-content {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
 
     :global {
       .item {
@@ -20,17 +32,37 @@
       max-width: 720px;
       width: 100%;
 
+      @media (max-width: 1260px) {
+        max-width: 57%;
+      }
+
+      @media (max-width: 800px) {
+        max-width: 100%;
+      }
+
       &__title {
         margin-bottom: 32px;
       }
 
       &-accordion {
         margin-bottom: 72px;
+
+        @media (max-width: 800px) {
+          margin-bottom: 48px;
+        }
+
+        @media (max-width: 480px) {
+          margin-bottom: 40px;
+        }
       }
 
       &-card {
         width: 100%;
         display: flex;
+
+        @media(max-width: 800px){
+          margin-bottom:48px;
+        }
 
         &__image {
           max-width: 120px;
@@ -75,6 +107,20 @@
       border-radius: 80px;
       box-shadow: rgba($colorSecondaryBlue, 0.5) 0px 8px 24px;
       height: fit-content;
+
+      @media (max-width: 1260px) {
+        max-width: 40%;
+      }
+
+      @media (max-width: 1024px) {
+        padding: 48px;
+        border-radius: 48px;
+      }
+
+      @media(max-width: 800px){
+        max-width: 100%;
+      }
+
       &-item {
         &:not(:last-child) {
           margin-bottom: 16px;

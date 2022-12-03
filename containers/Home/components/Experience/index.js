@@ -15,6 +15,8 @@ const Experience = () => {
 
   const slideAnimation = () => {
     let item = gsap.utils.toArray(".item");
+    let mm = gsap.matchMedia();
+    mm.add("(min-width: 801px)", () => {
 
     item.forEach((item) => {
       let tl = gsap.timeline({
@@ -31,6 +33,26 @@ const Experience = () => {
         opacity: 1,
       });
     });
+  })
+
+  mm.add("(max-width: 800px)", () => {
+
+    item.forEach((item) => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: item,
+          markers: false,
+          start: "top bottom",
+          end: "bottom bottom",
+          scrub: false,
+        },
+      });
+      tl.to(item, {
+        y: 0,
+        opacity: 1,
+      });
+    });
+  })
   };
 
   useEffect(() => {
