@@ -54,7 +54,7 @@
         @media (max-width: 800px) {
           flex-direction: column;
           margin-bottom: 40px;
-          transform: translateY(50%);
+          transform: translateY(25%);
           opacity: 0;
         }
 
@@ -100,9 +100,14 @@
               line-height: 72px;
               margin-bottom: 0;
 
-              @media(max-width: 480px){
+              @media (max-width: 800px) {
                 font-size: 30px;
                 line-height: 48px;
+              }
+
+              @media (max-width: 480px) {
+                font-size: 22px;
+                line-height: 40px;
               }
             }
           }

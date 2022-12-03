@@ -12,6 +12,10 @@
     margin-right: 0px;
   }
 
+  @media (max-width: 800px) {
+    transform: translateY(25%);
+  }
+
   &:not(:last-child) {
     margin-bottom: 56px;
   }
@@ -32,6 +36,7 @@
 
     &-content {
       display: flex;
+
       @media (max-width: 600px) {
         flex-direction: column;
       }
@@ -42,8 +47,7 @@
         height: auto;
         @media (max-width: 600px) {
           margin-bottom: 16px;
-        max-width: 120px;
-
+          max-width: 120px;
         }
       }
 
@@ -103,10 +107,6 @@
       background: $colorFourthBlack;
       padding: 24px 0 24px 39px;
       transition: $timeMedium ease-out;
-
-      @media (max-width: 800px) {
-        bottom: -20px;
-      }
 
       &:hover {
         transform: translateY(4px);

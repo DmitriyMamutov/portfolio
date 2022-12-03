@@ -20,8 +20,8 @@ const Menu = ({ onClick }) => {
                 to={to}
                 delay={300}
                 offset={offset}
-                smooth={true}
-                duration={800}
+                smooth='easeInOutQuint'
+                duration={2000}
                 onClick={onClick}
               >
                 <div className={styles["menu-list__text"]}>

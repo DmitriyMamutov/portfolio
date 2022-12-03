@@ -29,7 +29,9 @@
       }
 
       @media (max-width: 480px) {
-        transform: scaleX(-3) scaleY(3);
+        transform: scaleX(-2) scaleY(2);
+        top: 70px;
+        right: 20px;
       }
     }
     .char {
