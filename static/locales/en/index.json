@@ -70,7 +70,7 @@
     }
   },
   "questions": {
-    "title": "<span>Four things</span> you probably like to know from me",
+    "title": "Four things <span>you probably like to know from me</span>",
     "items": {
       "q1": {
         "title": "Do you have experience with <technology X>?",

@@ -1,10 +1,16 @@
 @import "./static/styles/base/variables";
 
 .about {
-  background: $colorFourthBlack;
+  background: linear-gradient(
+    180deg,
+    rgba($colorBlack, 1) 0%,
+    rgba($colorFourthBlack, 1) 20%,
+    rgba($colorFourthBlack, 1) 100%
+  );
   color: $colorWhite;
   position: relative;
   padding: 120px 0;
+  margin-top: -1px;
 
   @media (max-width: 1024px) {
     padding: 96px 0;

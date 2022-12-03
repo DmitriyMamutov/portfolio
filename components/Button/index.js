@@ -1,10 +1,13 @@
-import cn from "classnames";
-import styles from "./styles.module.scss";
-import React, { useRef, useState, forwardRef, useEffect } from "react";
+import React, { forwardRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import useMousePosition from "utils/useMousePosition";
 import { distance } from "utils/utils";
 import useHover from "utils/useHover";
+import { isDesktop } from "react-device-detect";
+import cn from "classnames";
+
+import styles from "./styles.module.scss";
+
 // eslint-disable-next-line react/display-name
 const Button = forwardRef((props, ref) => {
   const { mouseX, mouseY } = useMousePosition();
@@ -15,29 +18,30 @@ const Button = forwardRef((props, ref) => {
   useEffect(() => {
     let x = 0;
     let y = 0;
+    const node = hoverRef.current;
 
     if (hoverRef) {
-      const node = hoverRef.current;
+      if (isDesktop) {
+        // New values for the translations
+        const rect = node.getBoundingClientRect();
+        const distanceToTrigger = rect.width * 0.7;
+        const distanceMouseButton = distance(
+          mouseX + window.scrollX,
+          mouseY + window.scrollY,
+          rect.left + rect.width / 2,
+          rect.top + rect.height / 2,
+        );
 
-      // New values for the translations
-      const rect = node.getBoundingClientRect();
-      const distanceToTrigger = rect.width * 0.7;
-      const distanceMouseButton = distance(
-        mouseX + window.scrollX,
-        mouseY + window.scrollY,
-        rect.left + rect.width / 2,
-        rect.top + rect.height / 2,
-      );
-
-      // Handle magnetic effect
-      if (distanceMouseButton < distanceToTrigger) {
-        // Translate button position on hover
-        x = (mouseX + window.scrollX - (rect.left + rect.width / 2)) * 0.2;
-        y = (mouseY + window.scrollY - (rect.top + rect.height / 2)) * 0.2;
-        node.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-      } else {
-        // Restore initial position
-        node.style.transform = `translate3d(0, 0, 0)`;
+        // Handle magnetic effect
+        if (distanceMouseButton < distanceToTrigger) {
+          // Translate button position on hover
+          x = (mouseX + window.scrollX - (rect.left + rect.width / 2)) * 0.2;
+          y = (mouseY + window.scrollY - (rect.top + rect.height / 2)) * 0.2;
+          node.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        } else {
+          // Restore initial position
+          node.style.transform = `translate3d(0, 0, 0)`;
+        }
       }
 
       const handleMouseEnter = () => {

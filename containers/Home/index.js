@@ -6,14 +6,14 @@ import Experience from "./components/Experience";
 import Works from "./components/Works";
 import Footer from "components/Footer";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 const Home = () => {
   return (
-    <div className={styles['home']}>
+    <div className={styles["home"]}>
       <Header />
       <Hero />
-       <About />
+      <About />
       <Experience />
       <Works />
       <Questions />

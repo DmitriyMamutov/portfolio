@@ -18,7 +18,7 @@ const Header = () => {
               key={id}
               to={to}
               offset={offset}
-              smooth={true}
+              smooth="easeOut"
               duration={800}
             >
               <div

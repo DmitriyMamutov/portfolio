@@ -1,10 +1,10 @@
 import { Head, Html, Main, NextScript } from "next/document";
-
+import {WEBSITE_LOGO} from 'config/common';
 const Document = () => {
   return (
     <Html lang='ua'>
       <Head>
-        {/* <link rel="icon" href={TAB_ICON} /> */}
+        <link className='logo' rel="icon" href={WEBSITE_LOGO} />
         {/* <link
           rel="preload"
           href="/static/fonts/MontserratCyrillic/Montserrat-Regular.ttf"

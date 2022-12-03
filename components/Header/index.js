@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import cn from "classnames";
 import gsap from "gsap";
-import useTranslation from "next-translate/useTranslation";
 import useMediaQuery from "hooks/UseMediaQuery";
+import { isDesktop } from "react-device-detect";
 
 import dynamic from "next/dynamic";
 const HeaderContent = dynamic(() => import("./HeaderContent"), {
@@ -15,8 +15,6 @@ const Menu = dynamic(() => import("components/Menu"), {
 import styles from "./styles.module.scss";
 
 const Header = () => {
-  const { t } = useTranslation("common");
-
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   const isBreakpoint = useMediaQuery(800);
@@ -55,8 +53,10 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const header = document.querySelector(".header");
-    headsUp(header);
+    if (isDesktop) {
+      const header = document.querySelector(".header");
+      headsUp(header);
+    }
   }, []);
 
   useEffect(() => {

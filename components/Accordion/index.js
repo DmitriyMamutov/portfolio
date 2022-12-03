@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import useTranslation from "next-translate/useTranslation";
 import cn from "classnames";
 import { gsap } from "gsap";
+
 import styles from "./styles.module.scss";
 
 const Accordion = (props) => {
@@ -25,20 +26,40 @@ const Accordion = (props) => {
 
   const slideAnimation = () => {
     let accrodionItem = gsap.utils.toArray(".accordion");
-
-    accrodionItem.forEach((item) => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: item,
-          markers: false,
-          start: "top bottom",
-          end: "bottom+=150 bottom",
-          scrub: 1,
-        },
+    let mm = gsap.matchMedia();
+    mm.add("(min-width: 801px)", () => {
+      accrodionItem.forEach((item) => {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: item,
+            markers: false,
+            start: "top bottom",
+            end: "bottom+=150 bottom",
+            scrub: 1,
+          },
+        });
+        tl.to(item, {
+          y: 0,
+          opacity: 1,
+        });
       });
-      tl.to(item, {
-        y: 0,
-        opacity: 1,
+    });
+
+    mm.add("(max-width: 800px)", () => {
+      accrodionItem.forEach((item) => {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: item,
+            markers: false,
+            start: "top bottom",
+            end: "bottom bottom",
+            scrub: false,
+          },
+        });
+        tl.to(item, {
+          y: 0,
+          opacity: 1,
+        });
       });
     });
   };

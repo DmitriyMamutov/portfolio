@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { WORKS_LIST } from "config/index";
 import useTranslation from "next-translate/useTranslation";
 import cn from "classnames";

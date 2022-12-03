@@ -49,7 +49,6 @@ const About = () => {
           },
         });
         tl.to(item, {
-          // scaleX: 2,
           width: "150%",
         });
       });
@@ -87,7 +86,6 @@ const About = () => {
         });
       });
     });
-
   };
 
   useEffect(() => {
@@ -115,7 +113,7 @@ const About = () => {
                   <div
                     key={id}
                     id="about-container"
-                    className={cn(styles["about-content-list-block"], 'block')}
+                    className={cn(styles["about-content-list-block"], "block")}
                   >
                     <div
                       className={cn(
@@ -189,16 +187,6 @@ const About = () => {
                                     height={256}
                                   />
                                 </div>
-                                {/* <div
-                                  className={
-                                    styles[
-                                      "about-content-list-block-right-sublist-item__text"
-                                    ]
-                                  }
-                                >
-
-                            {t(`about.icons.${idx}.text`)}
-                                </div> */}
                               </div>
                             );
                           })}
