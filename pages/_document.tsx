@@ -2,7 +2,7 @@ import { Head, Html, Main, NextScript } from "next/document";
 import { WEBSITE_LOGO } from "config/common";
 const Document = () => {
   return (
-    <Html lang="ua">
+    <Html lang="en">
       <Head>
         <link className="logo" rel="icon" href={WEBSITE_LOGO} />
         <link

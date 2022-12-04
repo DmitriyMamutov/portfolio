@@ -119,6 +119,7 @@
         overflow: hidden;
         border-radius: 80px;
         position: relative;
+        z-index: 3;
 
         @media (max-width: 1260px) {
           max-width: 59%;

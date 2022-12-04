@@ -71,6 +71,8 @@ const Footer = () => {
           <a
             className={styles["footer-content__button"]}
             href="mailto:dmitriy.mamutov@gmail.com"
+            role="link"
+            aria-label={t("footer.buttonText")}
           >
             <Button theme={"footer"}>{t("footer.buttonText")}</Button>
           </a>
@@ -80,7 +82,11 @@ const Footer = () => {
               return (
                 <div key={id} className={styles["footer-content-list-item"]}>
                   <Link href={url} prefetch={false}>
-                    <a target="_blank">
+                    <a
+                      role="link"
+                      aria-label={`${t("footer.buttonText")} ${id}`}
+                      target="_blank"
+                    >
                       <Image src={iconUrl} width={128} height={128} alt={id} />
                     </a>
                   </Link>

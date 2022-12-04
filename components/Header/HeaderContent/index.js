@@ -33,6 +33,8 @@ const Header = () => {
       </div>
 
       <a
+        role="link"
+        aria-label={`${t("header.buttonText")} header`}
         className={styles["header-content__button"]}
         href="mailto:dmitriy.mamutov@gmail.com"
       >

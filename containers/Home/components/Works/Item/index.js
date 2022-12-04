@@ -107,6 +107,8 @@ const Works = (props) => {
       <div className={styles["works-list-item-text"]}>
         <Link href={url} prefetch={false}>
           <a
+            role="link"
+            aria-label={t(`works.items.${id}.title`)}
             target="_blank"
             onMouseOver={onMouseOver}
             onMouseLeave={onMouseLeave}

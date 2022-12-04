@@ -97,6 +97,16 @@
 
           &__title {
             margin-bottom: 8px;
+            font-size: 26px;
+            line-height: 48px;
+            font-weight: 700;
+            font-family: $fontHellix;
+            letter-spacing: 1px;
+
+            @media (max-width: 480px) {
+              font-size: 22px;
+              line-height: 40px;
+            }
 
             &--center {
               align-items: center;

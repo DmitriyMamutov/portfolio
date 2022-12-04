@@ -103,7 +103,10 @@ const Hero = () => {
                 "animation-opacity",
               )}
             >
-              <a href="mailto:dmitriy.mamutov@gmail.com">
+              <a 
+               role="link"
+               aria-label={`${t("hero.buttonText")} hero`}
+              href="mailto:dmitriy.mamutov@gmail.com">
                 <Button>{t("hero.buttonText")}</Button>
               </a>
             </div>

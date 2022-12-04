@@ -127,7 +127,6 @@ const About = () => {
                           "background",
                         )}
                       />
-                      <Title color="white" size="h5" level={5}>
                         <div
                           className={cn(
                             styles["about-content-list-block-left__title"],
@@ -140,7 +139,6 @@ const About = () => {
                         >
                           {t(`about.items.${id}.title`)}
                         </div>
-                      </Title>
                       {isSubtitle && (
                         <div
                           className={
