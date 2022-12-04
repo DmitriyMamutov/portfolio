@@ -18,12 +18,12 @@ const Works = (props) => {
   const toggleVisibility = useCallback(() => {
     if (showComponent === false && window.pageYOffset > 2) {
       setShowComponent(true);
-      window.removeEventListener('scroll', toggleVisibility);
+      window.removeEventListener("scroll", toggleVisibility);
     }
-  }, [showComponent])
+  }, [showComponent]);
 
   useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
   }, [toggleVisibility]);
 
   const ref = useRef(null);
@@ -127,8 +127,7 @@ const Works = (props) => {
         className={videoClass}
       >
         <video ref={ref} loop muted>
-       {showComponent && <Video videoUrl={videoUrl} />}
-
+          {showComponent && <Video videoUrl={videoUrl} />}
         </video>
         <div className={styles["works-list-item__image"]}>
           <Image

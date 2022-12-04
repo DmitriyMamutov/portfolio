@@ -5,7 +5,6 @@
   color: $colorWhite;
   position: relative;
   overflow: hidden;
-  z-index: 2;
 
   :global {
     .video {
@@ -72,6 +71,5 @@
     width: 100%;
     margin: 0 auto;
     position: relative;
-    z-index: 1;
   }
 }
