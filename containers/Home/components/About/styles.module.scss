@@ -190,10 +190,6 @@
             font-family: $fontHellix;
             font-size: 17px;
             line-height: 32px;
-
-            @media (max-width: 480px) {
-              color: $colorBlack;
-            }
           }
         }
       }

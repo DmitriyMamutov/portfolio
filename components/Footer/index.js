@@ -87,7 +87,12 @@ const Footer = () => {
                       aria-label={`${t("footer.buttonText")} ${id}`}
                       target="_blank"
                     >
-                      <Image src={iconUrl} width={128} height={128} alt={id} />
+                      <Image
+                        src={iconUrl}
+                        width={128}
+                        height={128}
+                        alt={id}
+                      />
                     </a>
                   </Link>
                 </div>
