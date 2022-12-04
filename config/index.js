@@ -1,5 +1,6 @@
 module.exports = {
   HERO_VIDEO: "/static/videos/index.mp4",
+  HERO_VIDEO_MOBILE: "/static/videos/index-mobile.mp4",
   QUESTIONS_VIDEO: "/static/videos/questions.mp4",
   ABOUT_LIST: [
     {

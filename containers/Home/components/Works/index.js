@@ -12,7 +12,7 @@ const Works = () => {
   return (
     <section className={cn(styles["works"], "works", "trigger")}>
       <div className={"container"}>
-        <Title color="white" size="h2" level={2}>
+        <Title color="white" size="h2" level={3}>
           <div className={styles["works__title"]}>{t("works.title")}</div>
         </Title>
         <div className={styles["works-list"]}>

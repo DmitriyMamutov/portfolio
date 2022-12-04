@@ -20,6 +20,8 @@ const Header = () => {
               offset={offset}
               smooth="easeOut"
               duration={800}
+              role="link"
+              aria-label={t(`header.items.${id}.text`)}
             >
               <div
                 className={styles["header-content-list-item__text"]}

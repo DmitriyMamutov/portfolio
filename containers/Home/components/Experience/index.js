@@ -63,7 +63,7 @@ const Experience = () => {
       <div className="container">
         <div className={styles["experience-content"]}>
           <div className={styles["experience-content-block"]}>
-            <Title size="h4" level={4} color="white">
+            <Title size="h4" level={3} color="white">
               <div
                 className={cn(
                   styles["experience-content-block__title"],
@@ -77,7 +77,7 @@ const Experience = () => {
               <Accordion key={"e1"} id={"e1"} localeName={"experience"} />
             </div>
 
-            <Title size="h4" level={4} color="white">
+            <Title size="h4" level={3} color="white">
               <div
                 className={cn(
                   styles["experience-content-block__title"],

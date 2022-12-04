@@ -6,12 +6,15 @@ import Video from "components/Video";
 import useTranslation from "next-translate/useTranslation";
 import Button from "components/Button";
 import Title from "components/Title";
-import { HERO_VIDEO } from "config/index";
+import { HERO_VIDEO, HERO_VIDEO_MOBILE } from "config/index";
+import useMediaQuery from "hooks/UseMediaQuery";
 
 import styles from "./styles.module.scss";
 
 const Hero = () => {
   const { t } = useTranslation("index");
+
+  const isBreakpoint = useMediaQuery(480);
 
   useEffect(() => {
     const myText = new SplitType(".animation-text");
@@ -62,11 +65,7 @@ const Hero = () => {
   return (
     <section className={styles["hero"]}>
       <div className={styles["hero__wrapper"]}>
-        {/* <div
-          className={"animation-opacity"}> */}
-        <Video src={HERO_VIDEO} />
-
-        {/* </div> */}
+        <Video src={isBreakpoint ?HERO_VIDEO_MOBILE: HERO_VIDEO} />
         <div className="container">
           <div className={styles["hero-content"]}>
             <Title color="white" level={1}>
@@ -103,10 +102,11 @@ const Hero = () => {
                 "animation-opacity",
               )}
             >
-              <a 
-               role="link"
-               aria-label={`${t("hero.buttonText")} hero`}
-              href="mailto:dmitriy.mamutov@gmail.com">
+              <a
+                role="link"
+                aria-label={`${t("hero.buttonText")} hero`}
+                href="mailto:dmitriy.mamutov@gmail.com"
+              >
                 <Button>{t("hero.buttonText")}</Button>
               </a>
             </div>
