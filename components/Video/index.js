@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 
 const Video = ({ src }) => {
   return (
-    <div className={cn(styles["video"], "video")}>
+    <div className={cn(styles["video"], "video", 'animation-video')}>
       <video autoPlay loop muted>
         <source src={src} type="video/mp4" />
       </video>

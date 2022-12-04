@@ -1,15 +1,30 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import cn from "classnames";
 import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import { isDesktop, isMobile } from "react-device-detect";
-
+import dynamic from "next/dynamic";
+const Video = dynamic(() => import("./Video"), {
+  ssr: false,
+});
 import styles from "../styles.module.scss";
 
 const Works = (props) => {
   const { t, id, videoUrl, color, width, height, url, imageUrl } = props;
   const [active, setActive] = useState(false);
+  const [showComponent, setShowComponent] = useState(false);
+
+  const toggleVisibility = useCallback(() => {
+    if (showComponent === false && window.pageYOffset > 2) {
+      setShowComponent(true);
+      window.removeEventListener('scroll', toggleVisibility);
+    }
+  }, [showComponent])
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+  }, [toggleVisibility]);
 
   const ref = useRef(null);
 
@@ -112,7 +127,8 @@ const Works = (props) => {
         className={videoClass}
       >
         <video ref={ref} loop muted>
-          <source src={videoUrl} type="video/mp4" />
+       {showComponent && <Video videoUrl={videoUrl} />}
+
         </video>
         <div className={styles["works-list-item__image"]}>
           <Image

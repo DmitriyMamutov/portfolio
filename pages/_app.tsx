@@ -1,9 +1,8 @@
 // import {useEffect, useCallback} from 'react';
-import type { AppProps } from 'next/app'
-import '../static/styles/main.scss'
+import type { AppProps } from "next/app";
+import "../static/styles/main.scss";
 
 export default function App({ Component, pageProps }: AppProps) {
-
   // const resetWindowScrollPosition = useCallback(() => window.scrollTo(0, 0), [])
 
   // useEffect(() => {
@@ -12,5 +11,5 @@ export default function App({ Component, pageProps }: AppProps) {
   //   }
   // }, [resetWindowScrollPosition])
 
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }

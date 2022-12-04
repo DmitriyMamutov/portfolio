@@ -23,6 +23,12 @@
   font-family: $fontHellix;
   box-shadow: inset 0px 0px 0px 0.5px $colorWhite;
 
+  @media (max-width: 480px) {
+    padding: 16px 24px;
+    max-width: 200px;
+    font-size: 16px;
+  }
+
   span {
     display: block;
     z-index: 100;

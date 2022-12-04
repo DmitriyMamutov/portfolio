@@ -9,18 +9,8 @@ export default function HomePage() {
     <div>
       <Head>
         <title>{t("metaTitle")}</title>
-        <meta
-          name="description"
-          content={t("metaDescription")}
-        />
-        {/* <meta property="og:url" content={`${Environment.BASE_URL}${pageUrl}`} />
-        <meta
-          name="twitter:url"
-          content={`${Environment.BASE_URL}${pageUrl}`}
-        />
-        <link rel="canonical" href={`${Environment.BASE_URL}${pageUrl}`} /> */}
+        <meta name="description" content={t("metaDescription")} />
       </Head>
-
       <Home />
     </div>
   );

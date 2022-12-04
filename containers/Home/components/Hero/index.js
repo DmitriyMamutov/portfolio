@@ -31,6 +31,11 @@ const Hero = () => {
         delay: 0.45,
         duration: 1,
       });
+
+      gsap.to(".animation-video", {
+        opacity: 1,
+        duration: 1,
+      });
     });
     mm.add("(max-width: 800px)", () => {
       gsap.to(".char", {
@@ -47,13 +52,21 @@ const Hero = () => {
         delay: 0,
         duration: 1,
       });
+      gsap.to(".animation-video", {
+        opacity: 1,
+        duration: 1,
+      });
     });
   }, []);
 
   return (
     <section className={styles["hero"]}>
       <div className={styles["hero__wrapper"]}>
+        {/* <div
+          className={"animation-opacity"}> */}
         <Video src={HERO_VIDEO} />
+
+        {/* </div> */}
         <div className="container">
           <div className={styles["hero-content"]}>
             <Title color="white" level={1}>
