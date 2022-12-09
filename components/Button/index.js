@@ -71,15 +71,12 @@ const Button = forwardRef((props, ref) => {
     }
   }, [mouseX, mouseY, hoverRef, fillControls]);
 
-  const { children, className, onClick, id, disabled, type, theme } = props;
+  const { children, className, newClass, onClick, id, disabled, type, theme } = props;
 
-  const buttonClass = cn(
-    styles["button"],
-    "button",
-    {
-      [styles["button--footer"]]: theme === "footer",
-    },
-    className,
+  const buttonClass = cn(styles["button"], "button", {
+    [styles["button--footer"]]: theme === "footer",
+  },
+  className
   );
 
   const fillClass = cn(styles["button__fill"], "fill", {
@@ -97,7 +94,9 @@ const Button = forwardRef((props, ref) => {
       aria-pressed="false"
       ref={hoverRef}
     >
-      <motion.span data-text={children}>{children}</motion.span>
+      <motion.span data-text={typeof children === "string" ? children : ""}>
+        {children}
+      </motion.span>
       <motion.div animate={fillControls} className={fillClass} />
     </motion.button>
   );

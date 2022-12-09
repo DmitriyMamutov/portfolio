@@ -16,6 +16,7 @@ const Title = (props) => {
       [styles["title--h4"]]: size === "h4",
       [styles["title--h5"]]: size === "h5",
       [styles["title--h6"]]: size === "h6",
+      [styles["title--footer"]]: size === "footer",
       [styles["title--300"]]: fontWeight === 300,
       [styles["title--400"]]: fontWeight === 400,
       [styles["title--500"]]: fontWeight === 500,
@@ -35,7 +36,7 @@ const Title = (props) => {
 
 Title.defaultProps = {
   size: "h1",
-  color: "black",
+  color: "white",
   fontWeight: 700,
   level: 2,
   defaultFont: "Hellix",

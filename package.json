@@ -11,14 +11,17 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.20.2",
+    "@material-ui/core": "^4.12.4",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
     "@u-wave/react-vimeo": "^0.9.10",
+    "axios": "^1.2.1",
     "classnames": "^2.3.2",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "file-loader": "^6.2.0",
+    "formik": "^2.2.9",
     "framer-motion": "^7.6.12",
     "gsap": "^3.11.3",
     "image-webpack-loader": "^8.1.0",
@@ -34,6 +37,7 @@
     "react-device-detect": "^2.2.2",
     "react-dom": "18.2.0",
     "react-locomotive-scroll": "^0.2.2",
+    "react-lottie": "^1.2.3",
     "react-parallax-tilt": "^1.7.72",
     "react-player": "^2.11.0",
     "react-scroll": "^1.8.8",
@@ -42,6 +46,7 @@
     "smooth-scrollbar": "^8.8.1",
     "split-type": "^0.3.3",
     "typescript": "4.9.3",
-    "webpack": "5.65.0"
+    "webpack": "5.65.0",
+    "yup": "^0.32.11"
   }
 }

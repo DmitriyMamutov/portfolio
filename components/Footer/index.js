@@ -2,10 +2,11 @@ import { useEffect } from "react";
 import useTranslation from "next-translate/useTranslation";
 import cn from "classnames";
 import { gsap } from "gsap";
-import Button from "components/Button";
 import { FOOTER_LIST } from "config/common";
 import Link from "next/link";
 import Image from "next/image";
+import ContactForm from "components/ContactForm";
+import Title from "components/Title";
 
 import styles from "./styles.module.scss";
 
@@ -21,7 +22,7 @@ const Footer = () => {
           scrollTrigger: {
             trigger: ".footer",
             markers: false,
-            start: "top+=100 bottom",
+            start: "top+=150 bottom",
             end: "bottom bottom",
             scrub: 1,
           },
@@ -41,7 +42,7 @@ const Footer = () => {
           scrollTrigger: {
             trigger: ".footer",
             markers: false,
-            start: "top+=100 bottom",
+            start: "top+=150 bottom",
             end: "bottom bottom",
             scrub: 1,
           },
@@ -63,41 +64,44 @@ const Footer = () => {
     <footer className={cn(styles["footer"], "footer")}>
       <div className="container">
         <div className={styles["footer-content"]}>
-          <div
-            className={styles["footer-content__text"]}
-            dangerouslySetInnerHTML={{ __html: t("footer.text") }}
-          />
+          <div className={styles["footer-content-block"]}>
+            <Title level={4} size="footer" color="white">
+              <div className={styles["footer-content-block__title"]}>
+                {t("footer.title")}
+              </div>
+            </Title>
+            <div className={styles["footer-content-block__description"]}>
+              {t("footer.description")}
+            </div>
+            <div className={styles["footer-content-block-list"]}>
+              {FOOTER_LIST.map(({ url, id, iconUrl }) => {
+                return (
+                  <div
+                    key={id}
+                    className={styles["footer-content-block-list-item"]}
+                  >
+                    <Link href={url} prefetch={false}>
+                      <a
+                        role="link"
+                        aria-label={`${t("footer.buttonText")} ${id}`}
+                        target="_blank"
+                      >
+                        <Image
+                          src={iconUrl}
+                          width={128}
+                          height={128}
+                          alt={id}
+                        />
+                      </a>
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
 
-          <a
-            className={styles["footer-content__button"]}
-            href="mailto:dmitriy.mamutov@gmail.com"
-            role="link"
-            aria-label={t("footer.buttonText")}
-          >
-            <Button theme={"footer"}>{t("footer.buttonText")}</Button>
-          </a>
-
-          <div className={styles["footer-content-list"]}>
-            {FOOTER_LIST.map(({ url, id, iconUrl }) => {
-              return (
-                <div key={id} className={styles["footer-content-list-item"]}>
-                  <Link href={url} prefetch={false}>
-                    <a
-                      role="link"
-                      aria-label={`${t("footer.buttonText")} ${id}`}
-                      target="_blank"
-                    >
-                      <Image
-                        src={iconUrl}
-                        width={128}
-                        height={128}
-                        alt={id}
-                      />
-                    </a>
-                  </Link>
-                </div>
-              );
-            })}
+          <div className={styles["footer-content-form"]}>
+            <ContactForm />
           </div>
         </div>
       </div>

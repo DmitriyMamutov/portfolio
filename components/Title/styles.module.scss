@@ -112,4 +112,20 @@
       line-height: 32px;
     }
   }
+
+
+  &--footer {
+    font-size: 80px;
+    line-height: 112px;
+
+    @media (max-width: 768px) {
+      font-size: 48px;
+      line-height: 72px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 30px;
+      line-height: 48px;
+    }
+  }
 }
