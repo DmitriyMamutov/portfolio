@@ -179,7 +179,6 @@ const About = () => {
                                   }
                                 >
                                   <Image
-                                    priority={true}
                                     src={iconUrl}
                                     alt={idx}
                                     width={256}

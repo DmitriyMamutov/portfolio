@@ -16,7 +16,7 @@ const Works = (props) => {
   const [showComponent, setShowComponent] = useState(false);
 
   const toggleVisibility = useCallback(() => {
-    if (showComponent === false && window.pageYOffset > 2) {
+    if (showComponent === false && window.pageYOffset >= 1) {
       setShowComponent(true);
       window.removeEventListener("scroll", toggleVisibility);
     }

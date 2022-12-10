@@ -29,6 +29,7 @@
     &-form {
       max-width: 540px;
       width: 100%;
+      min-height: 388px;
 
       @media (max-width: 1200px) {
         max-width: 47%;

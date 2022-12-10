@@ -1,4 +1,4 @@
-import animation from "static/animations/confetti/4.json";
+import animation from "static/animations/confetti";
 import Lottie from "react-lottie";
 
 const Confetti = () => {
