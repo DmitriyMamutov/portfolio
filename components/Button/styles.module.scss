@@ -68,6 +68,11 @@
     letter-spacing: 1px;
     background: transparent;
     box-shadow: inset 0px 0px 0px 2px $colorWhite;
+    border-radius: 40px;
+
+    @media (max-width: 480px) {
+      max-width: 100%;
+    }
 
     span {
       &:before {
@@ -103,7 +108,7 @@
     transform: translate3d(0, 80%, 0);
 
     &--footer {
-      background: $colorWhite;
+      background: $colorWhite !important;
 
       &:hover {
         box-shadow: inset 0px 0px 0px 5px $colorWhite !important;

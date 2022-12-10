@@ -17,18 +17,38 @@
         "text": "Contacts"
       }
     },
-    "buttonText": "Contact Me"
+    "buttonText": "Get In Touch"
   },
   "footer": {
-    "textSecond": "Feel free to <a href='mailto:dmitriy.mamutov@gmail.com'>contact me</a>  if you're looking for a communicative front-end developer who is passionate about creating great user experiences or just want to have a chat",
-    "text": "Feel free to contact me if you're looking for a communicative front-end developer who is passionate about creating great user experiences or just want to have a chat",
-    "buttonText": "Contact Me",
+    "title": "Contact me",
+    "description": "Feel free to contact me if you're looking for a communicative front-end developer who is passionate about creating great user experiences or just want to have a chat.",
     "items": {
       "f1": {
         "text": "LinkedIn"
       },
       "f2": {
         "text": "Telegram"
+      }
+    }
+  },
+
+  "contactForm":{
+    "buttonText": "Send message",
+    "required": "Please fill out this field",
+    "completedTitle": "Thank you!",
+    "completedSubtitle": "I will contact you within 24 hours.",
+    "items":{
+      "name":{
+        "placeholder": "Name",
+        "valid": "Please enter a valid Name"
+      },
+      "email":{
+        "placeholder": "Email",
+        "valid": "Please enter a valid Email"
+      },
+      "message":{
+        "placeholder": "Message",
+        "valid": "Please enter a valid Message"
       }
     }
   }
