@@ -100,7 +100,7 @@ const BannerForm = () => {
                   setCompleted(true);
                   setTimeout(() => {
                     setCompleted(false);
-                  }, 6000);
+                  }, 6500);
                 } else {
                   console.error();
                 }
