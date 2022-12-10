@@ -1,17 +1,34 @@
-import { useEffect } from "react";
+import { useEffect, useState,useCallback } from "react";
 import useTranslation from "next-translate/useTranslation";
 import cn from "classnames";
 import { gsap } from "gsap";
 import { FOOTER_LIST } from "config/common";
 import Link from "next/link";
 import Image from "next/image";
-import ContactForm from "components/ContactForm";
 import Title from "components/Title";
+
+import dynamic from "next/dynamic";
+const ContactForm = dynamic(() => import("components/ContactForm"), {
+  ssr: false,
+});
 
 import styles from "./styles.module.scss";
 
 const Footer = () => {
   const { t } = useTranslation("common");
+
+  const [showComponent, setShowComponent] = useState(false);
+
+  const toggleVisibility = useCallback(() => {
+    if (showComponent === false && window.pageYOffset > 1) {
+      setShowComponent(true);
+      window.removeEventListener("scroll", toggleVisibility);
+    }
+  }, [showComponent]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+  }, [toggleVisibility]);
 
   const slideAnimation = () => {
     let accrodionItem = gsap.utils.toArray(".questions__wrapper");
@@ -101,7 +118,7 @@ const Footer = () => {
           </div>
 
           <div className={styles["footer-content-form"]}>
-            <ContactForm />
+          {showComponent &&<ContactForm />}
           </div>
         </div>
       </div>
