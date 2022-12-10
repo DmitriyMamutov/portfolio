@@ -9,6 +9,7 @@ import { TextareaAutosize } from "@material-ui/core";
 import Title from "components/Title";
 import LottieLoader from "./LottieLoader";
 import Confetti from "./Confetti";
+import { CONTACT_FORM_ENDPOINT } from "config/common";
 
 import styles from "./styles.module.scss";
 
@@ -92,7 +93,7 @@ const BannerForm = () => {
 
           try {
             await axios
-              .post(`https://portfolio-lending-backend.vercel.app/`, formData, {
+              .post(CONTACT_FORM_ENDPOINT, formData, {
                 headers: { "Content-Type": "form/multipart" },
               })
               .then((r) => {
