@@ -6,7 +6,6 @@ import { FOOTER_LIST } from "config/common";
 import Link from "next/link";
 import Image from "next/image";
 import Title from "components/Title";
-import { isDesktop } from "react-device-detect";
 
 import dynamic from "next/dynamic";
 const ContactForm = dynamic(() => import("components/ContactForm"), {
@@ -21,11 +20,9 @@ const Footer = () => {
   const [showComponent, setShowComponent] = useState(false);
 
   const toggleVisibility = useCallback(() => {
-    if (!isDesktop && showComponent === false && window.pageYOffset >= 1) {
+    if (showComponent === false && window.pageYOffset >= 1) {
       setShowComponent(true);
       window.removeEventListener("scroll", toggleVisibility);
-    }else{
-      setShowComponent(true);
     }
   }, [showComponent]);
 
