@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import cn from "classnames";
 import gsap from "gsap";
 import useMediaQuery from "hooks/UseMediaQuery";
-import { isDesktop } from "react-device-detect";
+import { isDesktop, isMobile } from "react-device-detect";
 
 import dynamic from "next/dynamic";
 const HeaderContent = dynamic(() => import("./HeaderContent"), {
@@ -16,6 +16,8 @@ import styles from "./styles.module.scss";
 
 const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  // const [scrolled, setScrolled] = useState(2);
+  const [once, setOnce] = useState(false);
 
   const isBreakpoint = useMediaQuery(800);
 
@@ -51,6 +53,15 @@ const Header = () => {
       return window.addEventListener("scroll", makeOffset);
     window.attachEvent("onscroll", makeOffset);
   };
+
+  useEffect(() => {
+    if (menuIsOpen && !once && window.pageYOffset < 2) {
+      setOnce(true);
+      setTimeout(() => {
+        window.scroll(0, 2);
+      }, 301);
+    }
+  }, [menuIsOpen, once]);
 
   useEffect(() => {
     if (isDesktop) {

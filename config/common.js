@@ -1,4 +1,6 @@
 module.exports = {
+  HOMEPAGE_URL: "/",
+
   WEBSITE_LOGO: "/static/images/logo/1.png",
 
   CONTACT_FORM_ENDPOINT: "https://portfolio-lending-backend.vercel.app/",

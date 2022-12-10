@@ -1,4 +1,4 @@
-import buttonAnimation from "static/animations/contact-form";
+import buttonAnimation from "static/animations/error/1.json";
 import Lottie from "react-lottie";
 
 const LottieLoader = () => {
@@ -16,8 +16,8 @@ const LottieLoader = () => {
       <Lottie
         options={defaultOptions}
         isClickToPauseDisabled
-        height={40}
-        width={220}
+        height="auto"
+        width="100%"
       />
     </div>
   );

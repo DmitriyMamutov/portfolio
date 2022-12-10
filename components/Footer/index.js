@@ -20,7 +20,7 @@ const Footer = () => {
   const [showComponent, setShowComponent] = useState(false);
 
   const toggleVisibility = useCallback(() => {
-    if (showComponent === false && window.pageYOffset > 1) {
+    if (showComponent === false && window.pageYOffset >= 1) {
       setShowComponent(true);
       window.removeEventListener("scroll", toggleVisibility);
     }
