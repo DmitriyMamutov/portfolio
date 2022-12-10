@@ -133,6 +133,7 @@ const Works = (props) => {
         </video>
         <div className={styles["works-list-item__image"]}>
           <Image
+                lazyBoundary="1200px"
             src={imageUrl}
             width={width}
             height={height}
