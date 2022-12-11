@@ -1,4 +1,6 @@
 module.exports = {
+
+  DOMAIN: 'https://www.dmamutov.com/',
   HOMEPAGE_URL: "/",
 
   WEBSITE_LOGO: "/static/images/logo/1.png",
