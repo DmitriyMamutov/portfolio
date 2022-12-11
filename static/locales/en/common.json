@@ -35,7 +35,8 @@
   "contactForm":{
     "buttonText": "Send message",
     "required": "Please fill out this field",
-    "completedTitle": "Thank you!",
+    "completedTitle": "Thank you",
+    "exclamationMark": "!",
     "completedSubtitle": "I will contact you within 24 hours.",
     "items":{
       "name":{

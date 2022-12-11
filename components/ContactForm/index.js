@@ -7,8 +7,11 @@ import Button from "components/Button";
 import * as Yup from "yup";
 import { TextareaAutosize } from "@material-ui/core";
 import Title from "components/Title";
+import dynamic from "next/dynamic";
 import LottieLoader from "./LottieLoader";
-import Confetti from "./Confetti";
+const Confetti = dynamic(() => import("./Confetti"), {
+  ssr: false,
+});
 import { CONTACT_FORM_ENDPOINT } from "config/common";
 
 import styles from "./styles.module.scss";
@@ -39,6 +42,7 @@ const fields = [
 
 const BannerForm = () => {
   const [completed, setCompleted] = useState(false);
+  const [nameState, setNameState] = useState("");
 
   const { t } = useTranslation("common");
 
@@ -66,9 +70,13 @@ const BannerForm = () => {
           [styles["contact-completed--visible"]]: completed,
         })}
       >
-        <Title size="footer" level={4}>
+        <Title size="h2" level={4}>
           <div className={styles["contact-completed__title"]}>
-            {t(`contactForm.completedTitle`)}
+            {t(`contactForm.completedTitle`)}&nbsp;
+            <p>
+              {nameState}
+              {t(`contactForm.exclamationMark`)}
+            </p>
           </div>
         </Title>
         <div className={styles["contact-completed__subtitle"]}>
@@ -98,6 +106,7 @@ const BannerForm = () => {
               })
               .then((r) => {
                 if (r.status === 200) {
+                  setNameState(name);
                   setCompleted(true);
                   setTimeout(() => {
                     setCompleted(false);
