@@ -108,6 +108,7 @@ const Footer = () => {
                           width={128}
                           height={128}
                           alt={id}
+                          lazyBoundary="2400px"
                         />
                       </a>
                     </Link>

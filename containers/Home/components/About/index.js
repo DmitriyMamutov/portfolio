@@ -127,18 +127,18 @@ const About = () => {
                           "background",
                         )}
                       />
-                        <div
-                          className={cn(
-                            styles["about-content-list-block-left__title"],
-                            {
-                              [styles[
-                                "about-content-list-block-left__title--center"
-                              ]]: isDescription,
-                            },
-                          )}
-                        >
-                          {t(`about.items.${id}.title`)}
-                        </div>
+                      <div
+                        className={cn(
+                          styles["about-content-list-block-left__title"],
+                          {
+                            [styles[
+                              "about-content-list-block-left__title--center"
+                            ]]: isDescription,
+                          },
+                        )}
+                      >
+                        {t(`about.items.${id}.title`)}
+                      </div>
                       {isSubtitle && (
                         <div
                           className={
@@ -183,6 +183,7 @@ const About = () => {
                                     alt={idx}
                                     width={256}
                                     height={256}
+                                    lazyBoundary="800px"
                                   />
                                 </div>
                               </div>

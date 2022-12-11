@@ -92,6 +92,7 @@ const Experience = () => {
             >
               <div className={styles["experience-content-block-card__image"]}>
                 <Image
+                lazyBoundary="1200px"
                   src={ZNTU_LOGO}
                   width={509}
                   height={599}

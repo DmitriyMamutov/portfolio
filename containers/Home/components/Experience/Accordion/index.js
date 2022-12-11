@@ -83,6 +83,7 @@ const Accordion = (props) => {
         <div className={styles["accordion-item-content"]}>
           <div className={styles["accordion-item-content__image"]}>
             <Image
+                lazyBoundary="1200px"
               src={S_PRO_LOGO}
               alt={t(`${localeName}.items.${id}.position`)}
               width={240}
