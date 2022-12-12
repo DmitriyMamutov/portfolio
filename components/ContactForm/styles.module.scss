@@ -147,7 +147,6 @@
 
       textarea {
         resize: none;
-        // transition: height $timeFast;
       }
       input:-webkit-autofill,
       input:-webkit-autofill:hover,
@@ -157,8 +156,9 @@
       select:-webkit-autofill,
       select:-webkit-autofill:hover,
       select:-webkit-autofill:focus {
-        border: 0;
+        border: 2px solid $colorWhite;
         transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: $colorWhite;
       }
 
       .error-msg {
@@ -170,10 +170,6 @@
         line-height: 16px;
         color: $colorErrorRed;
         font-family: $fontHellix;
-
-        // &--active{
-        //   background-color:blue;
-        // }
 
         :global {
           .icon-close {
