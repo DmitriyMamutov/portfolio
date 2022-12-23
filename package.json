@@ -2,7 +2,7 @@
   "name": "lending",
   "version": "0.1.0",
   "description": "portfolio lending",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "dev": "next -p 3001",
     "build": "next build",

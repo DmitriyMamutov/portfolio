@@ -23,7 +23,7 @@ const Hero = () => {
             </div>
           </Title>
           <Link href={HOMEPAGE_URL}>
-            <a>
+            <a aria-label={t("hero.buttonText")} role="link">
               <Button className={styles["hero-content__button"]}>
                 {t("hero.buttonText")}
               </Button>
