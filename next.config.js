@@ -4,7 +4,6 @@ const nextTranslate = require("next-translate");
 
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   i18n: {
     defaultLocale: "en", // Should be the same as in i18n file
     locales: ["en"], // Should be the same as in i18n file
